@@ -1,16 +1,11 @@
-# Live Deployment Checklist for dubaitoabudhabilift.com
+# Before publishing
 
-1. **Deploy to Hosting**:
-   - Upload the files to your host (e.g. Netlify, Vercel, cPanel, Cloudflare Pages, etc.).
-   - Connect your domain `dubaitoabudhabilift.com` with SSL/HTTPS enabled.
-
-2. **Google Search Console (GSC)**:
-   - Add property `https://dubaitoabudhabilift.com/`.
-   - Submit sitemap `https://dubaitoabudhabilift.com/sitemap.xml` for instant crawling.
-
-3. **Google Business Profile (Local Map Pack)**:
-   - Claim a free Google Business Profile under "Dubai to Abu Dhabi Lift" in Dubai.
-   - Set website URL to `https://dubaitoabudhabilift.com/` to capture top 3 map rankings for local searches.
-
-4. **Phone & WhatsApp**:
-   - When ready, replace the placeholder phone number in `js/config.js` with your active business WhatsApp number.
+- Confirm the starting fares, service coverage, fare inclusions, schedules, and booking/cancellation terms.
+- Add the real business WhatsApp number to `whatsappIntl` in js/config.js before publishing, using international digits only.
+- Add the real business call number to `phoneIntl` in js/config.js to enable the homepage Call now button.
+- Confirm the service email address.
+- Upload the site to the domain with HTTPS enabled.
+- Open each page on a phone and desktop after deployment; check that every photo and link loads.
+- Submit sitemap.xml in Google Search Console after the site is live.
+- If creating or updating a Google Business Profile, check eligibility and use accurate business details. Do not invent a street address.
+- Replace representative stock photos with actual fleet photos when available, with permission to use them, and update image-credits.html.

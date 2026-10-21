@@ -1,17 +1,13 @@
 {
   "name": "Dubai to Abu Dhabi Lift",
   "short_name": "Dubai-AD Lift",
-  "description": "Daily door-to-door passenger car lift and carpool service between Dubai and Abu Dhabi along E11 Sheikh Zayed Road.",
+  "description": "Ride inquiries for travel from Dubai to Abu Dhabi.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#161d22",
-  "theme_color": "#0e6b4e",
+  "background_color": "#f7f7f3",
+  "theme_color": "#154536",
   "icons": [
-    {
-      "src": "images/og-image.jpg",
-      "sizes": "1200x630",
-      "type": "image/jpeg",
-      "purpose": "any maskable"
-    }
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ]
 }

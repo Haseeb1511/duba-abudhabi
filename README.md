@@ -1,53 +1,35 @@
-# Dubai to Abu Dhabi Lift (dubaitoabudhabilift.com)
+# Dubai to Abu Dhabi Lift
 
-A fast, lightweight, and ultra-high SEO-optimized website built for high search rankings on Google, Bing, and AI search engines.
+A small static website for ride inquiries between Dubai and Abu Dhabi. It has no build step or booking backend.
 
----
+## Pages and assets
 
-## 📁 File Structure
+- index.html — English homepage, vehicle list, starting fares, FAQs, and quote form.
+- ar.html — Arabic service page.
+- legal.html — booking terms.
+- privacy.html — describes the current form and contact behavior.
+- image-credits.html — photo creators and licenses.
+- css/style.css — responsive layout, colors, and components.
+- js/main.js — mobile navigation, WhatsApp booking links and form, theme toggle, and FAQ accordion.
+- js/config.js — business WhatsApp number, optional call number, and reference email.
+- images/fleet/ — responsive WebP photo variants for the eight listed models.
 
-- `index.html`: Fully pre-rendered semantic HTML with schema.org JSON-LD, targeted H1/H2 hierarchy, comparison matrix, vehicles, pricing, and FAQ.
-- `legal.html`: Terms of service, cancellation policies, refund rules, and payment options with Breadcrumb schema.
-- `robots.txt`: Search crawler instructions pointing directly to `https://dubaitoabudhabilift.com/sitemap.xml`.
-- `sitemap.xml`: XML sitemap configured for Google Search Console indexation.
-- `images/og-image.jpg`: High-resolution Open Graph / social preview image for rich link previews on WhatsApp, Facebook, LinkedIn, and Google Discover.
-- `css/style.css`: Clean, responsive styling with comparison table and trust badges.
-- `js/config.js`: Centralized business configuration (Brand name, Phone numbers, Email, Domain).
-- `js/main.js`: Progressive enhancement for WhatsApp chat integration, mobile menu, and quote dispatch.
+## Add the business WhatsApp number
 
----
+Open `js/config.js` and set `whatsappIntl` to the real business WhatsApp number using international digits only, without `+`, spaces, or punctuation. No placeholder number is included. While it is blank, WhatsApp opens with the visitor's message and asks them to choose a chat; once set, booking messages open directly to the business. The booking form asks the customer for their contact phone number and includes it in the WhatsApp draft.
 
-## 🚀 Key SEO Enhancements Implemented
+## Add the call number
 
-1. **Exact Match Domain (EMD) Power**:
-   - Built around `dubaitoabudhabilift.com`, giving you an immediate organic ranking advantage for *"Dubai to Abu Dhabi Lift"* searches.
-   - Configured all canonical URLs, OpenGraph URLs, JSON-LD `@id`s, and sitemap entries to `https://dubaitoabudhabilift.com/`.
+Set `phoneIntl` in `js/config.js` to the real call number in international digits only. No dummy number is included. The homepage shows a disabled Call now button until a valid number is configured; after that, it opens the visitor's phone dialer with that number.
 
-2. **Crawler & Indexation Essentials**:
-   - Added [robots.txt](file:///c:/Users/hasee/Desktop/faisal%20website/robots.txt) allowing search bots and specifying sitemap location.
-   - Added [sitemap.xml](file:///c:/Users/hasee/Desktop/faisal%20website/sitemap.xml) for fast indexation on Google Search Console.
-   - Added self-referencing canonical tags on all pages to prevent duplicate content penalties.
-   - Added robots directives: `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`.
+## Keep the site accurate
 
-3. **Rich Snippets & Structured Data (Schema.org JSON-LD)**:
-   - `LocalBusiness` / `TaxiService`: Operating hours, pricing range, UAE geo-coordinates, area served, and aggregate rating.
-   - `FAQPage`: All 10 commuter questions and answers structured for Google FAQ SERP rich snippets.
-   - `OfferCatalog`: Structured pricing for shared one-way, round-trip, private, and monthly packages.
-   - `BreadcrumbList`: Enhanced navigational breadcrumb trails.
+- Check the starting fares, availability, included charges, routes, and booking terms before publishing changes.
+- The fleet pictures are representative Wikimedia Commons photos, not photographs of the actual cars. Creator and license details are on image-credits.html.
+- Replace a photo only with an image you own or are allowed to use. Update the image credit page when its source or license changes.
+- The inquiry form opens a WhatsApp draft. It does not submit to a website server; visitors review the message and tap Send in WhatsApp.
+- Email is shown as a reference contact. Ride booking links use WhatsApp.
 
-4. **Static HTML Pre-Rendering**:
-   - All vehicle models, pricing tiers, and pickup/drop-off area chips are pre-rendered directly in HTML so search engines (and bots without JavaScript) index every keyword instantly.
+## Publish
 
----
-
-## 🌐 Next Steps When Publishing
-
-1. **Deploy to Hosting**:
-   - Upload the project folder to Netlify, Vercel, Hostinger, or GitHub Pages.
-   - Connect your custom domain `dubaitoabudhabilift.com`.
-2. **Submit to Google Search Console**:
-   - Go to [Google Search Console](https://search.google.com/search-console).
-   - Add `https://dubaitoabudhabilift.com/` as a property.
-   - Submit `https://dubaitoabudhabilift.com/sitemap.xml` under the "Sitemaps" tab for fast crawling.
-3. **Google Business Profile**:
-   - Create a free [Google Business Profile](https://www.google.com/business/) under "Dubai to Abu Dhabi Lift" in Dubai and link it to `https://dubaitoabudhabilift.com/` for local map pack rankings.
+Upload the site files to static hosting with the custom domain and HTTPS enabled. The public sitemap is https://dubaitoabudhabilift.com/sitemap.xml; robots.txt points to it. After publishing, check the live pages and sitemap in Google Search Console.
