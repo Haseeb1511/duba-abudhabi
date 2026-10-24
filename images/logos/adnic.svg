@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none" role="img" aria-label="ADNIC Logo">
+  <g transform="translate(10, 8)">
+    <circle cx="20" cy="20" r="18" fill="none" stroke="#0072CE" stroke-width="2.5"/>
+    <path d="M12 20l6 6 12-12" fill="none" stroke="#0072CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="56" y="29" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="900" letter-spacing="2" fill="#003366">ADNIC</text>
+  <text x="57" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#0072CE">ABU DHABI NATIONAL INSURANCE</text>
+</svg>

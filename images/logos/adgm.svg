@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none" role="img" aria-label="ADGM Logo">
+  <g transform="translate(10, 8)">
+    <rect x="14" y="2" width="13" height="13" rx="2" transform="rotate(45 14 2)" fill="#B58D3D"/>
+    <rect x="26" y="14" width="13" height="13" rx="2" transform="rotate(45 26 14)" fill="#D4AF37"/>
+    <rect x="2" y="14" width="13" height="13" rx="2" transform="rotate(45 2 14)" fill="#8C6B28"/>
+    <rect x="14" y="26" width="13" height="13" rx="2" transform="rotate(45 14 26)" fill="#B58D3D"/>
+  </g>
+  <text x="56" y="30" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="900" letter-spacing="2.5" fill="#14261C">ADGM</text>
+  <text x="57" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#9E782F">ABU DHABI GLOBAL MARKET</text>
+</svg>

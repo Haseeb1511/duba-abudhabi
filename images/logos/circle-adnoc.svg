@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ADNOC Logo">
+  <g transform="translate(50, 42)">
+    <g transform="translate(-18, -18)">
+      <circle cx="18" cy="18" r="17" stroke="#005A9C" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <path d="M18 2a16 16 0 0 1 16 16h-7a9 9 0 0 0-9-9V2z" fill="#005A9C"/>
+      <path d="M34 18a16 16 0 0 1-16 16v-7a9 9 0 0 0 9-9h7z" fill="#0072CE"/>
+      <path d="M18 34a16 16 0 0 1-16-16h7a9 9 0 0 0 9 9v7z" fill="#003865"/>
+      <path d="M2 18A16 16 0 0 1 18 2v7a9 9 0 0 0-9 9H2z" fill="#29B6F6"/>
+      <circle cx="18" cy="18" r="4" fill="#005A9C"/>
+    </g>
+  </g>
+  <text x="50" y="77" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="900" letter-spacing="1.5" fill="#003865">ADNOC</text>
+  <text x="50" y="89" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="#0072CE">أدنوك</text>
+</svg>

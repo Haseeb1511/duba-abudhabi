@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none" role="img" aria-label="Abu Dhabi Government Logo">
+  <style>
+    .gov-title { fill: #1C2924; }
+    @media (prefers-color-scheme: dark) {
+      .gov-title { fill: #F3F7F4; }
+    }
+  </style>
+  <!-- Abu Dhabi Falcon & Crest Emblem -->
+  <g transform="translate(10, 6)">
+    <!-- Golden falcon wings & body -->
+    <path d="M22 4c-1.5 2.5-3 5-6 6.5-3.5 1.8-8 1.5-12 0 3 3 7 4.8 11 5 1.5 0 3-.2 4.5-.6L22 4z" fill="#C48C34"/>
+    <path d="M22 4c1.5 2.5 3 5 6 6.5 3.5 1.8 8 1.5 12 0-3 3-7 4.8-11 5-1.5 0-3-.2-4.5-.6L22 4z" fill="#C48C34"/>
+    <path d="M22 14c-4.5 0-8 3.5-8 8v6c0 5 3.5 9 8 12 4.5-3 8-7 8-12v-6c0-4.5-3.5-8-8-8z" fill="#9E1B32"/>
+    <!-- Heraldic Shield Inner -->
+    <path d="M22 17c-3 0-5.5 2.5-5.5 5.5v5c0 3.5 2.5 6.5 5.5 8.5 3-2 5.5-5 5.5-8.5v-5c0-3-2.5-5.5-5.5-5.5z" fill="#ffffff"/>
+    <path d="M22 18v16c2.5-1.8 4.2-4.2 4.2-7v-4.5c0-2.5-1.8-4.5-4.2-4.5z" fill="#9E1B32"/>
+    <!-- Golden Emblem Accents -->
+    <circle cx="22" cy="10" r="3.2" fill="#D4AF37"/>
+    <path d="M19 40l3 3 3-3v-4h-6v4z" fill="#C48C34"/>
+  </g>
+  <!-- Arabic Calligraphy Text -->
+  <text class="gov-title" x="60" y="27" font-family="'Cairo', 'Noto Sans Arabic', 'Segoe UI', sans-serif" font-size="16" font-weight="900" letter-spacing="0.5">حكومة أبوظبي</text>
+  <!-- English Subtext -->
+  <text x="61" y="42" font-family="'Inter', -apple-system, sans-serif" font-size="8.5" font-weight="800" letter-spacing="1.8" fill="#C48C34">ABU DHABI GOVERNMENT</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ADIB Logo">
+  <g transform="translate(50, 42)">
+    <g transform="translate(-18, -17)">
+      <path d="M4 28C9 16 17 8 30 6c-7 5-10 14-8 22H4z" fill="#00A3E0"/>
+      <path d="M12 30c4-7 10-12 20-14-5 3-7 9-6 14H12z" fill="#002D62"/>
+      <circle cx="24" cy="7" r="3" fill="#00A3E0"/>
+    </g>
+  </g>
+  <text x="50" y="77" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="900" letter-spacing="1.5" fill="#002D62">ADIB</text>
+  <text x="50" y="89" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="#00A3E0">مصرف أبوظبي الإسلامي</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ADGM Logo">
+  <g transform="translate(50, 42)">
+    <g transform="translate(-16, -16)">
+      <rect x="12" y="2" width="10" height="10" rx="1.5" transform="rotate(45 12 2)" fill="#B58D3D"/>
+      <rect x="22" y="12" width="10" height="10" rx="1.5" transform="rotate(45 22 12)" fill="#D4AF37"/>
+      <rect x="2" y="12" width="10" height="10" rx="1.5" transform="rotate(45 2 12)" fill="#8C6B28"/>
+      <rect x="12" y="22" width="10" height="10" rx="1.5" transform="rotate(45 12 22)" fill="#B58D3D"/>
+    </g>
+  </g>
+  <text x="50" y="77" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="900" letter-spacing="2" fill="#14261C">ADGM</text>
+  <text x="50" y="89" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="7" font-weight="700" letter-spacing="1" fill="#9E782F">سوق أبوظبي العالمي</text>
+</svg>

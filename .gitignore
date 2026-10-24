@@ -41,3 +41,12 @@ node_modules/
 dist/
 build/
 .cache/
+
+# Temporary and backup files
+*.bak
+*.tmp
+*.temp
+*~
+
+# Unused large assets
+images/dubai-abudhabi-intercity-route.webp
