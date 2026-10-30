@@ -1221,12 +1221,19 @@ html[data-theme="dark"] .hero-points li strong {
 }
 
 .vehicles-section,
-html[data-theme="dark"] .vehicles-section,
-html[data-theme="light"] .vehicles-section {
+html[data-theme="dark"] .vehicles-section {
   background: linear-gradient(135deg, #050e1b 0%, #091a2e 50%, #030810 100%);
   color: #ffffff;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Light Mode: Softer, elegant executive navy blue (gentle & balanced) */
+html[data-theme="light"] .vehicles-section {
+  background: linear-gradient(135deg, #1b385e 0%, #254d7e 50%, #173356 100%);
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .vehicles-section .section-heading h2,
@@ -2062,14 +2069,23 @@ html[data-theme="dark"] .plan-featured .plan-cta-btn:hover {
 
 /* Dedicated Commuter Shift Timings Section (Midnight Blue Theme) */
 .shift-section,
-html[data-theme="dark"] .shift-section,
-html[data-theme="light"] .shift-section {
+html[data-theme="dark"] .shift-section {
   padding: 82px 0 76px;
   background: linear-gradient(135deg, #050e1b 0%, #091a2e 50%, #030810 100%);
   color: #ffffff;
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Light Mode: Softer, elegant executive navy blue (gentle & balanced) */
+html[data-theme="light"] .shift-section {
+  padding: 82px 0 76px;
+  background: linear-gradient(135deg, #1b385e 0%, #254d7e 50%, #173356 100%);
+  color: #ffffff;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .shift-schedule-header {
