@@ -209,16 +209,26 @@ html[data-theme="dark"] .site-header {
   color: var(--green);
 }
 
-.main-nav .nav-cta {
-  padding: 10px 17px;
+.main-nav .nav-cta,
+html[data-theme="light"] .main-nav .nav-cta,
+html[data-theme="dark"] .main-nav .nav-cta {
+  padding: 10px 18px;
   border-radius: 999px;
-  color: var(--white);
-  background: var(--green);
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.28);
+  font-weight: 800;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 
-.main-nav .nav-cta:hover {
-  color: var(--white);
-  background: var(--green-deep);
+.main-nav .nav-cta:hover,
+html[data-theme="light"] .main-nav .nav-cta:hover,
+html[data-theme="dark"] .main-nav .nav-cta:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2ae26f 0%, #1ea753 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
 }
 
 /* Navigation Dropdown (Desktop Only) */
@@ -553,14 +563,24 @@ h3 {
   transform: none;
 }
 
-.button-primary {
-  color: var(--white);
-  background: var(--green);
+.button-primary,
+html[data-theme="light"] .button-primary,
+html[data-theme="dark"] .button-primary {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  font-weight: 800;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 
-.button-primary:hover {
-  color: var(--white);
-  background: var(--green-deep);
+.button-primary:hover,
+html[data-theme="light"] .button-primary:hover,
+html[data-theme="dark"] .button-primary:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2ae26f 0%, #1ea753 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
 }
 
 .button-secondary {
@@ -1401,7 +1421,9 @@ html[data-theme="light"] .vehicles-section .eyebrow {
   letter-spacing: -.02em;
 }
 
-.button-vehicle-book {
+.button-vehicle-book,
+html[data-theme="light"] .button-vehicle-book,
+html[data-theme="dark"] .button-vehicle-book {
   display: inline-flex;
   width: 100%;
   min-height: 44px;
@@ -1409,22 +1431,23 @@ html[data-theme="light"] .vehicles-section .eyebrow {
   justify-content: center;
   gap: 8px;
   padding: 10px 14px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   border-radius: 12px;
   font-size: 13.5px;
-  font-weight: 700;
-  color: var(--white);
-  background: var(--green);
-  text-decoration: none;
-  cursor: pointer;
+  font-weight: 800;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%) !important;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3) !important;
   transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
 }
 
-.button-vehicle-book:hover {
-  color: var(--white);
-  background: var(--green-deep);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, .4);
+.button-vehicle-book:hover,
+html[data-theme="light"] .button-vehicle-book:hover,
+html[data-theme="dark"] .button-vehicle-book:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2ae26f 0%, #1ea753 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45) !important;
 }
 
 .button-vehicle-book:active {
@@ -1809,41 +1832,40 @@ html[data-theme="light"] .plan-overview-card.plan-featured .plan-price-hero {
   margin-top: auto;
 }
 
-.plan-cta-btn {
+.plan-cta-btn,
+.plan-featured .plan-cta-btn,
+html[data-theme="light"] .plan-cta-btn,
+html[data-theme="light"] .plan-featured .plan-cta-btn,
+html[data-theme="dark"] .plan-cta-btn,
+html[data-theme="dark"] .plan-featured .plan-cta-btn {
   width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  min-height: 46px;
   padding: 12px 18px;
   border-radius: 14px;
   font-size: 14px;
-  font-weight: 750;
+  font-weight: 800;
   text-decoration: none;
-  background: linear-gradient(135deg, #18181d 0%, #0d0d10 100%);
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%) !important;
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.32) !important;
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
 }
 
-.plan-cta-btn:hover {
+.plan-cta-btn:hover,
+.plan-featured .plan-cta-btn:hover,
+html[data-theme="light"] .plan-cta-btn:hover,
+html[data-theme="light"] .plan-featured .plan-cta-btn:hover,
+html[data-theme="dark"] .plan-cta-btn:hover,
+html[data-theme="dark"] .plan-featured .plan-cta-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #24242c 0%, #18181d 100%);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-.plan-featured .plan-cta-btn {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
-  color: #0a0e0c !important;
-  font-weight: 800;
-  border: 1px solid rgba(251, 191, 36, 0.6);
-  box-shadow: 0 4px 18px rgba(217, 119, 6, 0.38);
-}
-
-.plan-featured .plan-cta-btn:hover {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.55);
+  background: linear-gradient(135deg, #2ae26f 0%, #1ea753 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.48) !important;
 }
 
 .plan-cta-btn .wa-btn-icon {
@@ -2002,30 +2024,7 @@ html[data-theme="dark"] .plan-booking-hint strong {
   color: #ffffff;
 }
 
-html[data-theme="dark"] .plan-cta-btn {
-  background: linear-gradient(135deg, #24242c 0%, #151518 100%);
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
-}
-
-html[data-theme="dark"] .plan-cta-btn:hover {
-  background: linear-gradient(135deg, #32323c 0%, #1f1f24 100%);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-}
-
-html[data-theme="dark"] .plan-featured .plan-cta-btn {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
-  color: #0a0e0c !important;
-  font-weight: 800;
-  border-color: rgba(251, 191, 36, 0.6);
-  box-shadow: 0 4px 18px rgba(217, 119, 6, 0.38);
-}
-
-html[data-theme="dark"] .plan-featured .plan-cta-btn:hover {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.55);
-}
+/* Unified WhatsApp Booking CTA on Plan Cards across themes */
 
 @media (max-width: 960px) {
   .commute-plans-grid {
@@ -5017,19 +5016,19 @@ html[data-theme="dark"] .site-header {
 html[data-theme="dark"] .main-nav .nav-cta,
 html[data-theme="dark"] .button-primary,
 html[data-theme="dark"] .button-vehicle-book {
-  color: #0a0e0c !important;
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%) !important;
   font-weight: 800;
-  box-shadow: 0 4px 18px rgba(217, 119, 6, 0.35);
-  border: 1px solid rgba(251, 191, 36, 0.5);
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 html[data-theme="dark"] .main-nav .nav-cta:hover,
 html[data-theme="dark"] .button-primary:hover,
 html[data-theme="dark"] .button-vehicle-book:hover {
-  color: #000 !important;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  box-shadow: 0 6px 24px rgba(217, 119, 6, 0.55);
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2ae26f 0%, #1ea753 100%) !important;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
 }
 
 html[data-theme="dark"] .hero {
