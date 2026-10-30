@@ -1245,10 +1245,19 @@ html[data-theme="light"] .vehicles-section .section-heading>p {
   color: #f7cf73;
 }
 
-.vehicles-section .eyebrow {
-  background: rgba(212, 175, 55, 0.15);
-  color: #f7cf73;
-  border: 1px solid rgba(212, 175, 55, 0.35);
+.vehicles-section .eyebrow,
+html[data-theme="dark"] .vehicles-section .eyebrow,
+html[data-theme="light"] .vehicles-section .eyebrow {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  color: #f7cf73 !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
 }
 
 .vehicles-section .carousel-button {
