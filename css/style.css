@@ -5939,12 +5939,14 @@ html[dir="rtl"] .floating-whatsapp:hover .floating-whatsapp-tooltip,
 /* ==========================================================================
    OUR SERVICES OVERVIEW SECTION (LIGHT MODE BASE: REFINED LUXURY CARDS)
    ========================================================================== */
-.services-overview-section {
+.services-overview-section,
+html[data-theme="dark"] .services-overview-section,
+html[data-theme="light"] .services-overview-section {
   padding: 84px 0 90px;
-  background: linear-gradient(180deg, #f8f9fa 0%, #edf0f5 100%);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  color: var(--ink);
+  background: linear-gradient(145deg, #a84e00 0%, #bd5a00 50%, #943d00 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
   position: relative;
 }
 
@@ -5972,19 +5974,31 @@ html[dir="rtl"] .floating-whatsapp:hover .floating-whatsapp-tooltip,
   display: none;
 }
 
-.services-overview-header h2 {
+.services-overview-header h2,
+html[data-theme="dark"] .services-overview-header h2,
+html[data-theme="light"] .services-overview-header h2 {
   font-size: clamp(30px, 4vw, 46px);
-  color: var(--ink) !important;
+  color: #ffffff !important;
   font-weight: 850;
   letter-spacing: -.025em;
   line-height: 1.2;
   margin: 0 0 16px;
-  text-shadow: none;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
 }
 
-.services-overview-lead {
+.services-overview-header .eyebrow,
+html[data-theme="dark"] .services-overview-header .eyebrow,
+html[data-theme="light"] .services-overview-header .eyebrow {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff3c4;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.services-overview-lead,
+html[data-theme="dark"] .services-overview-lead,
+html[data-theme="light"] .services-overview-lead {
   font-size: clamp(16px, 1.8vw, 18px);
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.6;
   margin: 0 auto;
   max-width: 720px;
@@ -5997,37 +6011,49 @@ html[dir="rtl"] .floating-whatsapp:hover .floating-whatsapp-tooltip,
   align-items: stretch;
 }
 
-/* Light Mode: Crisp, Elegant White Luxury Cards */
-.service-preview-card {
-  background: #ffffff;
-  border: 1px solid var(--line);
+/* Services Cards: Glassmorphism over Rich Orange with Amber/Orange Hover */
+.service-preview-card,
+html[data-theme="dark"] .service-preview-card,
+html[data-theme="light"] .service-preview-card {
+  background: rgba(80, 28, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 24px 22px 22px;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease, border-color .25s ease;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease, border-color .25s ease, background .25s ease;
   overflow: hidden;
 }
 
-.service-preview-card:hover {
+.service-preview-card:hover,
+html[data-theme="dark"] .service-preview-card:hover,
+html[data-theme="light"] .service-preview-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
-  border-color: rgba(212, 175, 55, 0.45);
+  background: rgba(110, 40, 0, 0.85);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 24px rgba(255, 190, 60, 0.25);
+  border-color: rgba(255, 220, 100, 0.75);
 }
 
-/* Featured VIP Service Card (Private Car Lift) - radiant warm gold accent border in Light Mode */
-.service-preview-card.service-featured {
-  background: #ffffff;
-  border: 1.5px solid rgba(212, 175, 55, 0.6);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12), 0 0 16px rgba(212, 175, 55, 0.06);
+/* Featured VIP Service Card (Private Car Lift) */
+.service-preview-card.service-featured,
+html[data-theme="dark"] .service-preview-card.service-featured,
+html[data-theme="light"] .service-preview-card.service-featured {
+  background: rgba(105, 40, 0, 0.72);
+  border: 1.5px solid rgba(255, 210, 80, 0.55);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 190, 60, 0.2);
 }
 
-.service-preview-card.service-featured:hover {
+.service-preview-card.service-featured:hover,
+html[data-theme="dark"] .service-preview-card.service-featured:hover,
+html[data-theme="light"] .service-preview-card.service-featured:hover {
   transform: translateY(-5px);
-  border-color: #d4af37;
-  box-shadow: 0 18px 42px rgba(212, 175, 55, 0.22);
+  background: rgba(135, 52, 0, 0.9);
+  border-color: rgba(255, 230, 120, 0.9);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.55), 0 0 30px rgba(255, 200, 80, 0.35);
 }
 
 .service-card-top {
@@ -6138,29 +6164,37 @@ html[dir="rtl"] .floating-whatsapp:hover .floating-whatsapp-tooltip,
   border-color: #fecdd3;
 }
 
-.service-card-title {
+.service-card-title,
+html[data-theme="dark"] .service-card-title,
+html[data-theme="light"] .service-card-title {
   font-size: 21px;
   font-weight: 850;
-  color: var(--ink);
+  color: #ffffff;
   margin: 0 0 10px;
   letter-spacing: -.02em;
   line-height: 1.3;
 }
 
-.service-card-title a {
-  color: var(--ink);
+.service-card-title a,
+html[data-theme="dark"] .service-card-title a,
+html[data-theme="light"] .service-card-title a {
+  color: #ffffff;
   text-decoration: none;
   transition: color .2s ease;
 }
 
-.service-preview-card:hover .service-card-title a {
-  color: #b45309;
+.service-preview-card:hover .service-card-title a,
+html[data-theme="dark"] .service-preview-card:hover .service-card-title a,
+html[data-theme="light"] .service-preview-card:hover .service-card-title a {
+  color: #ffd768;
 }
 
-.service-card-desc {
+.service-card-desc,
+html[data-theme="dark"] .service-card-desc,
+html[data-theme="light"] .service-card-desc {
   font-size: 14px;
   line-height: 1.62;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.88);
   margin: 0 0 20px;
   min-height: 66px;
 }
@@ -6175,25 +6209,29 @@ html[dir="rtl"] .floating-whatsapp:hover .floating-whatsapp-tooltip,
   flex-grow: 1;
 }
 
-.service-card-features li {
+.service-card-features li,
+html[data-theme="dark"] .service-card-features li,
+html[data-theme="light"] .service-card-features li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 13.5px;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.48;
 }
 
-.service-card-features .feature-check {
+.service-card-features .feature-check,
+html[data-theme="dark"] .service-card-features .feature-check,
+html[data-theme="light"] .service-card-features .feature-check {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #f0fdf4;
-  color: #16a34a;
-  border: 1px solid #bbf7d0;
+  background: rgba(255, 212, 55, 0.2);
+  color: #ffd768;
+  border: 1px solid rgba(255, 212, 55, 0.45);
   font-size: 11px;
   font-weight: 850;
   flex-shrink: 0;
@@ -6216,26 +6254,32 @@ html[dir="rtl"] .floating-whatsapp:hover .floating-whatsapp-tooltip,
   line-height: 1.25;
 }
 
-.service-rate-hint .hint-label {
+.service-rate-hint .hint-label,
+html[data-theme="dark"] .service-rate-hint .hint-label,
+html[data-theme="light"] .service-rate-hint .hint-label {
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: .08em;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   font-weight: 750;
   margin-bottom: 2px;
 }
 
-.service-rate-hint .hint-price {
+.service-rate-hint .hint-price,
+html[data-theme="dark"] .service-rate-hint .hint-price,
+html[data-theme="light"] .service-rate-hint .hint-price {
   font-size: 21px;
   font-weight: 850;
-  color: var(--ink);
+  color: #ffffff;
   letter-spacing: -.01em;
 }
 
-.service-rate-hint .hint-price small {
+.service-rate-hint .hint-price small,
+html[data-theme="dark"] .service-rate-hint .hint-price small,
+html[data-theme="light"] .service-rate-hint .hint-price small {
   font-size: 12.5px;
   font-weight: 600;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   letter-spacing: normal;
 }
 
@@ -7526,19 +7570,7 @@ html[data-theme="dark"] .rate-badge.rate-perk {
   border-color: rgba(212, 175, 55, 0.32);
 }
 
-html[data-theme="dark"] .services-overview-section {
-  background: #121216;
-}
-
-html[data-theme="dark"] .service-preview-card {
-  background: #1a1a20;
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-html[data-theme="dark"] .service-preview-card.service-featured {
-  background: #1e1c18;
-  border-color: rgba(212, 175, 55, 0.55);
-}
+/* Dark Mode Services Overrides merged into unified orange theme */
 
 html[data-theme="dark"] .service-pill-badge.badge-school,
 html[data-theme="dark"] .service-pill-badge.badge-private,
