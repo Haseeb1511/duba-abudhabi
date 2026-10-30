@@ -3214,17 +3214,16 @@ html[data-theme="dark"] .location-card-action .button {
 .contact-copy h2 {
   font-size: clamp(32px, 3.8vw, 46px);
   font-weight: 850;
-  color: #ffffff !important;
+  color: var(--ink);
   letter-spacing: -.025em;
   line-height: 1.2;
   margin: 0 0 16px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .contact-copy>p:not(.eyebrow):not(.contact-small) {
   font-size: 16px;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
   margin: 0 0 28px;
   max-width: 440px;
 }
@@ -7752,12 +7751,16 @@ html[data-theme="light"] .contact-section::before {
 
 html:not([data-theme="dark"]) .contact-copy h2,
 html[data-theme="light"] .contact-copy h2 {
-  color: #0f1115;
+  color: #0f1115 !important;
+  text-shadow: none !important;
 }
 
 html:not([data-theme="dark"]) .contact-copy p,
-html[data-theme="light"] .contact-copy p {
-  color: #334155;
+html[data-theme="light"] .contact-copy p,
+html:not([data-theme="dark"]) .contact-copy>p:not(.eyebrow):not(.contact-small),
+html[data-theme="light"] .contact-copy>p:not(.eyebrow):not(.contact-small) {
+  color: #334155 !important;
+  text-shadow: none !important;
 }
 
 html:not([data-theme="dark"]) .contact-copy .eyebrow,
@@ -7830,11 +7833,13 @@ html[data-theme="dark"] .contact-section::before {
 }
 
 html[data-theme="dark"] .contact-copy h2 {
-  color: #ffffff;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
-html[data-theme="dark"] .contact-copy p {
-  color: rgba(255, 255, 255, 0.82);
+html[data-theme="dark"] .contact-copy p,
+html[data-theme="dark"] .contact-copy>p:not(.eyebrow):not(.contact-small) {
+  color: rgba(255, 255, 255, 0.88) !important;
 }
 
 html[data-theme="dark"] .contact-copy .eyebrow {
