@@ -1220,10 +1220,45 @@ html[data-theme="dark"] .hero-points li strong {
   padding: 82px 0;
 }
 
-.vehicles-section {
-  background: linear-gradient(180deg, #f8f9fa 0%, #edf0f5 100%);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+.vehicles-section,
+html[data-theme="dark"] .vehicles-section,
+html[data-theme="light"] .vehicles-section {
+  background: linear-gradient(135deg, #050e1b 0%, #091a2e 50%, #030810 100%);
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vehicles-section .section-heading h2,
+html[data-theme="dark"] .vehicles-section .section-heading h2,
+html[data-theme="light"] .vehicles-section .section-heading h2 {
+  color: #ffffff !important;
+}
+
+.vehicles-section .section-heading>p,
+html[data-theme="dark"] .vehicles-section .section-heading>p,
+html[data-theme="light"] .vehicles-section .section-heading>p {
+  color: #cbd5e1;
+}
+
+.vehicles-section .section-heading>p a.text-link {
+  color: #f7cf73;
+}
+
+.vehicles-section .eyebrow {
+  background: rgba(212, 175, 55, 0.15);
+  color: #f7cf73;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.vehicles-section .carousel-button {
+  background: #111a28;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.vehicles-section .vehicle-count {
+  color: #cbd5e1;
 }
 
 .section-heading {
@@ -2016,14 +2051,16 @@ html[data-theme="dark"] .plan-featured .plan-cta-btn:hover {
   background: var(--paper);
 }
 
-/* Dedicated Commuter Shift Timings Section (Light Mode Base) */
-.shift-section {
+/* Dedicated Commuter Shift Timings Section (Midnight Blue Theme) */
+.shift-section,
+html[data-theme="dark"] .shift-section,
+html[data-theme="light"] .shift-section {
   padding: 82px 0 76px;
-  background: linear-gradient(180deg, #f8f9fa 0%, #edf0f5 100%);
-  color: var(--ink);
+  background: linear-gradient(135deg, #050e1b 0%, #091a2e 50%, #030810 100%);
+  color: #ffffff;
   position: relative;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .shift-schedule-header {
@@ -2031,20 +2068,25 @@ html[data-theme="dark"] .plan-featured .plan-cta-btn:hover {
   margin-bottom: 40px;
 }
 
-.shift-schedule-header h2 {
+.shift-schedule-header h2,
+html[data-theme="dark"] .shift-schedule-header h2,
+html[data-theme="light"] .shift-schedule-header h2 {
   font-size: clamp(30px, 3.8vw, 44px);
   font-weight: 850;
-  color: var(--ink);
+  color: #ffffff !important;
   letter-spacing: -.02em;
   margin: 0;
   text-shadow: none;
 }
 
-.shift-schedule-header h2 .shift-title-gold {
-  color: #0284c7;
-  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+.shift-schedule-header h2 .shift-title-gold,
+html[data-theme="dark"] .shift-schedule-header h2 .shift-title-gold,
+html[data-theme="light"] .shift-schedule-header h2 .shift-title-gold {
+  color: #f7cf73;
+  background: linear-gradient(180deg, #fff3c4 0%, #f7cf73 50%, #e2a537 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(245, 196, 81, 0.45));
 }
 
 .shift-columns-grid {
@@ -2079,18 +2121,26 @@ html[data-theme="dark"] .plan-featured .plan-cta-btn:hover {
   flex-direction: column;
 }
 
-.shift-group-title {
+.shift-group-title,
+html[data-theme="dark"] .shift-group-title,
+html[data-theme="light"] .shift-group-title {
   font-size: 22px;
   font-weight: 850;
-  color: var(--ink);
+  color: #ffffff !important;
   margin: 0;
   letter-spacing: -.02em;
   line-height: 1.25;
 }
 
-.shift-group-route {
+.shift-group-icon {
+  color: #f7cf73;
+}
+
+.shift-group-route,
+html[data-theme="dark"] .shift-group-route,
+html[data-theme="light"] .shift-group-route {
   font-size: 13.5px;
-  color: #0369a1;
+  color: #93c5fd;
   font-weight: 700;
   margin-top: 3px;
   letter-spacing: .02em;
