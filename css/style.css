@@ -7545,14 +7545,31 @@ html[data-theme="dark"] .how-step-body p {
 }
 
 .about-more-link {
-  display: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 750;
-  font-size: 14px;
-  color: #92400e;
+  font-size: 15px;
+  color: #b37e28;
+  margin-top: 4px;
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.about-more-link:hover {
+  gap: 12px;
+  color: #8c5d13;
+  text-decoration: underline;
 }
 
 html[data-theme="dark"] .about-more-link {
   color: #f7cf73;
+}
+
+html[data-theme="dark"] .about-more-link:hover {
+  color: #fde68a;
 }
 
 /* 4. Cohesive Palette Unification (Black, White, Gold — zero rainbow clashes) */
