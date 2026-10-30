@@ -7198,72 +7198,69 @@ body {
   word-break: break-word;
 }
 
-/* 2. DUAL-THEME HERO SYSTEM (Dedicated Light & Dark Palettes) */
-
-/* --- A. LIGHT MODE HERO (Default / data-theme="light") --- */
+/* 2. EXECUTIVE HIGHWAY HERO BACKDROP (Unified in Light & Dark Mode) */
 .hero,
 [dir="rtl"] .hero,
-html:not([data-theme="dark"]) .hero,
+html[data-theme="dark"] .hero,
 html[data-theme="light"] .hero {
-  background-color: #fbfbfd;
+  background-color: #0b0c10;
   background-image:
     linear-gradient(108deg,
-      rgba(255, 255, 255, 0.96) 0%,
-      rgba(255, 255, 255, 0.91) 48%,
-      rgba(255, 255, 255, 0.65) 76%,
-      rgba(255, 255, 255, 0.25) 100%),
+      rgba(9, 10, 14, 0.92) 0%,
+      rgba(12, 14, 20, 0.82) 52%,
+      rgba(12, 14, 20, 0.58) 100%),
     url('../images/about.webp');
   background-position: center 35%;
   background-size: cover;
-  color: var(--ink);
-  border-bottom: 1px solid var(--line);
+  color: #f8fafc;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
 }
 
-[dir="rtl"] html:not([data-theme="dark"]) .hero,
+[dir="rtl"] .hero,
+[dir="rtl"] html[data-theme="dark"] .hero,
 [dir="rtl"] html[data-theme="light"] .hero {
   background-image:
     linear-gradient(252deg,
-      rgba(255, 255, 255, 0.96) 0%,
-      rgba(255, 255, 255, 0.91) 48%,
-      rgba(255, 255, 255, 0.65) 76%,
-      rgba(255, 255, 255, 0.25) 100%),
+      rgba(9, 10, 14, 0.92) 0%,
+      rgba(12, 14, 20, 0.82) 52%,
+      rgba(12, 14, 20, 0.58) 100%),
     url('../images/about.webp');
 }
 
 .hero .eyebrow,
-html:not([data-theme="dark"]) .hero .eyebrow,
+html[data-theme="dark"] .hero .eyebrow,
 html[data-theme="light"] .hero .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  color: #92400e;
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  color: #f5d07a;
   margin-bottom: 16px;
 }
 
 .hero h1,
-html:not([data-theme="dark"]) .hero h1,
+html[data-theme="dark"] .hero h1,
 html[data-theme="light"] .hero h1 {
-  color: #0f1115;
-  text-shadow: none;
+  color: #ffffff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 
 .hero .hero-title-gold,
-html:not([data-theme="dark"]) .hero .hero-title-gold,
+html[data-theme="dark"] .hero .hero-title-gold,
 html[data-theme="light"] .hero .hero-title-gold {
-  color: #b47a16;
-  background: linear-gradient(135deg, #9a6818 0%, #c48c34 45%, #b47a16 100%);
+  color: #f7cf73;
+  background: linear-gradient(135deg, #fff3c4 0%, #f7cf73 48%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero .hero-lead,
-html:not([data-theme="dark"]) .hero .hero-lead,
+html[data-theme="dark"] .hero .hero-lead,
 html[data-theme="light"] .hero .hero-lead {
-  color: #334155;
+  color: rgba(241, 245, 249, 0.88);
 }
 
 .hero .button-primary {
@@ -7279,132 +7276,55 @@ html[data-theme="light"] .hero .hero-lead {
 }
 
 .hero .button-secondary,
-html:not([data-theme="dark"]) .hero .button-secondary,
+html[data-theme="dark"] .hero .button-secondary,
 html[data-theme="light"] .hero .button-secondary {
-  background: #ffffff;
-  color: #0f1115;
-  border: 1px solid var(--line);
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
-}
-
-.hero .button-secondary:hover,
-html:not([data-theme="dark"]) .hero .button-secondary:hover,
-html[data-theme="light"] .hero .button-secondary:hover {
-  background: #f8fafc;
-  border-color: #d4af37;
-  color: #0f1115;
-}
-
-.hero .hero-points,
-html:not([data-theme="dark"]) .hero .hero-points,
-html[data-theme="light"] .hero .hero-points {
-  color: #334155;
-  gap: 8px 14px;
-}
-
-.hero .hero-points li,
-html:not([data-theme="dark"]) .hero .hero-points li,
-html[data-theme="light"] .hero .hero-points li {
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid var(--line);
-  padding: 5px 11px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  color: #334155;
-}
-
-.hero .hero-points li strong,
-html:not([data-theme="dark"]) .hero .hero-points li strong,
-html[data-theme="light"] .hero .hero-points li strong {
-  color: #0f1115;
-}
-
-.hero .hero-points li span,
-html:not([data-theme="dark"]) .hero .hero-points li span,
-html[data-theme="light"] .hero .hero-points li span {
-  background: rgba(212, 175, 55, 0.18);
-  color: #92400e;
-  width: 17px;
-  height: 17px;
-  font-size: 11px;
-}
-
-/* --- B. DARK MODE HERO (html[data-theme="dark"]) --- */
-html[data-theme="dark"] .hero,
-[dir="rtl"] html[data-theme="dark"] .hero {
-  background-color: #0b0c10;
-  background-image:
-    linear-gradient(108deg,
-      rgba(9, 10, 14, 0.92) 0%,
-      rgba(12, 14, 20, 0.82) 52%,
-      rgba(12, 14, 20, 0.58) 100%),
-    url('../images/about.webp');
-  background-position: center 35%;
-  background-size: cover;
-  color: #f8fafc;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
-}
-
-[dir="rtl"] html[data-theme="dark"] .hero {
-  background-image:
-    linear-gradient(252deg,
-      rgba(9, 10, 14, 0.92) 0%,
-      rgba(12, 14, 20, 0.82) 52%,
-      rgba(12, 14, 20, 0.58) 100%),
-    url('../images/about.webp');
-}
-
-html[data-theme="dark"] .hero .eyebrow {
-  background: rgba(212, 175, 55, 0.14);
-  border-color: rgba(212, 175, 55, 0.42);
-  color: #f5d07a;
-}
-
-html[data-theme="dark"] .hero h1 {
-  color: #ffffff;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
-}
-
-html[data-theme="dark"] .hero .hero-title-gold {
-  color: #f7cf73;
-  background: linear-gradient(135deg, #fff3c4 0%, #f7cf73 48%, #d4af37 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-html[data-theme="dark"] .hero .hero-lead {
-  color: rgba(241, 245, 249, 0.88);
-}
-
-html[data-theme="dark"] .hero .button-secondary {
   background: rgba(255, 255, 255, 0.09);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-html[data-theme="dark"] .hero .button-secondary:hover {
+.hero .button-secondary:hover,
+html[data-theme="dark"] .hero .button-secondary:hover,
+html[data-theme="light"] .hero .button-secondary:hover {
   background: rgba(255, 255, 255, 0.16);
   border-color: #f7cf73;
   color: #ffffff;
 }
 
-html[data-theme="dark"] .hero .hero-points {
+.hero .hero-points,
+html[data-theme="dark"] .hero .hero-points,
+html[data-theme="light"] .hero .hero-points {
   color: rgba(241, 245, 249, 0.88);
+  gap: 8px 14px;
 }
 
-html[data-theme="dark"] .hero .hero-points li {
+.hero .hero-points li,
+html[data-theme="dark"] .hero .hero-points li,
+html[data-theme="light"] .hero .hero-points li {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 12.5px;
   color: rgba(241, 245, 249, 0.88);
 }
 
-html[data-theme="dark"] .hero .hero-points li strong {
+.hero .hero-points li strong,
+html[data-theme="dark"] .hero .hero-points li strong,
+html[data-theme="light"] .hero .hero-points li strong {
   color: #ffffff;
 }
 
-html[data-theme="dark"] .hero .hero-points li span {
+.hero .hero-points li span,
+html[data-theme="dark"] .hero .hero-points li span,
+html[data-theme="light"] .hero .hero-points li span {
   background: rgba(212, 175, 55, 0.22);
   color: #f7cf73;
+  width: 17px;
+  height: 17px;
+  font-size: 11px;
 }
 
 /* 3. DUAL-THEME HOW IT WORKS 3-STEP STRIP */
