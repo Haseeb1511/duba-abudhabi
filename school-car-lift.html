@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>School &amp; Campus Lift Dubai to Abu Dhabi | Student &amp; Teacher Transport</title>
@@ -16,7 +27,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body>
@@ -102,7 +113,7 @@
           <div class="stat-counter-title">Door-to-Door Pickup</div>
         </div>
         <div class="stat-counter-card">
-          <div class="stat-counter-number">7:20 <sup>AM</sup></div>
+          <div class="stat-counter-number">7:30 <sup>AM</sup></div>
           <div class="stat-counter-title">Early Arrival Window</div>
         </div>
         <div class="stat-counter-card">
@@ -118,9 +129,8 @@
       <!-- Overview Banner -->
       <div class="drivers-intro-banner">
         <div class="drivers-intro-text">
-          <h2>Punctual Commutes for Schools &amp; Campuses</h2>
-          <p>Fixed morning and afternoon schedules matched to class hours. Safe, comfortable daily travel for students
-            and teachers between Dubai and Abu Dhabi.</p>
+          <h2>Safe, Reliable Commute for Students &amp; Teachers</h2>
+          <p>Scheduled morning and afternoon pickups timed to class hours. Safe, comfortable daily travel for students and faculty between Dubai and Abu Dhabi.</p>
         </div>
       </div>
 
@@ -131,9 +141,8 @@
             <div class="driver-icon-box">🛡️</div>
             <span class="driver-pillar-pill">Safety First</span>
           </div>
-          <h3>Verified Permanent Chauffeurs</h3>
-          <p>Background-checked, licensed drivers with verified zero-incident highway safety records on the E11. We
-            assign dedicated permanent drivers so students always ride with a familiar, vetted face.</p>
+          <h3>Friendly, Trusted Regular Drivers</h3>
+          <p>Licensed drivers with clean highway safety records. We assign the same regular driver so students and teachers always ride with a familiar, trusted person every day.</p>
         </div>
 
         <div class="driver-card">
@@ -142,7 +151,7 @@
             <span class="driver-pillar-pill">Timetable</span>
           </div>
           <h3>Aligned to School &amp; Campus Hours</h3>
-          <p>Morning departures (7:20 AM) ensure arrival before school gates close. Afternoon return shifts at 3:30 PM
+          <p>Morning departures (7:30 AM) ensure arrival before school gates close. Afternoon return shifts at 3:30 PM
             and 4:40 PM cater to standard dismissal, extracurricular activities, and university lectures.</p>
         </div>
 
@@ -151,9 +160,8 @@
             <div class="driver-icon-box">📱</div>
             <span class="driver-pillar-pill">Parent Updates</span>
           </div>
-          <h3>Direct Parent WhatsApp Coordination</h3>
-          <p>Parents receive prompt WhatsApp notifications upon pickup, highway progress, and safe campus drop-off,
-            giving families complete peace of mind throughout the commute.</p>
+          <h3>Direct Parent WhatsApp Updates</h3>
+          <p>Parents can receive quick WhatsApp updates upon pickup and safe arrival at school, giving families complete peace of mind throughout the journey.</p>
         </div>
 
         <div class="driver-card">
@@ -396,7 +404,7 @@
   </a>
 
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>

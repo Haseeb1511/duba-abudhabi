@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>Corporate Car Lift Dubai to Abu Dhabi | Staff &amp; Executive Transport</title>
@@ -16,7 +27,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body>
@@ -118,10 +129,8 @@
       <!-- Intro Banner -->
       <div class="drivers-intro-banner">
         <div class="drivers-intro-text">
-          <h2>Eliminate Highway Fatigue for Your Workforce</h2>
-          <p>The daily 140 km drive on the E11 highway between Dubai and Abu Dhabi exhausts employees before their
-            workday even begins. Leading UAE companies, government entities, and financial firms partner with us to
-            provide seamless, scheduled staff commute services that boost employee retention and daily focus.</p>
+          <h2>Reliable Daily Commute for Your Team</h2>
+          <p>A daily 150 km commute between Dubai and Abu Dhabi can quickly drain employees before the workday even starts. We help companies and organizations arrange scheduled, reliable car lifts for their staff—arriving on time, relaxed, and ready to work.</p>
         </div>
       </div>
 
@@ -142,9 +151,8 @@
             <div class="driver-icon-box">🤝</div>
             <span class="driver-pillar-pill">Dedicated Fleet</span>
           </div>
-          <h3>Reserved Vehicles &amp; Permanent Drivers</h3>
-          <p>Your team travels together in dedicated vehicles with the same vetted, licensed chauffeurs every day,
-            building trust, punctual morning routines, and a reliable commute rhythm.</p>
+          <h3>Reserved Vehicles &amp; Regular Drivers</h3>
+          <p>Your team rides together in dedicated vehicles with the same reliable, licensed driver every day, creating a dependable and comfortable morning routine.</p>
         </div>
 
         <div class="driver-card">
@@ -152,9 +160,8 @@
             <div class="driver-icon-box">📊</div>
             <span class="driver-pillar-pill">Invoicing</span>
           </div>
-          <h3>Corporate Accounts &amp; Monthly Billing</h3>
-          <p>Streamlined corporate accounts with consolidated monthly invoicing, clear itemized shift tracking, and
-            dedicated account managers on WhatsApp for rapid scheduling adjustments.</p>
+          <h3>Simple Monthly Billing</h3>
+          <p>Clear monthly invoicing, transparent per-seat or per-vehicle rates, and direct WhatsApp support whenever you need to adjust schedules.</p>
         </div>
 
         <div class="driver-card">
@@ -162,9 +169,8 @@
             <div class="driver-icon-box">💼</div>
             <span class="driver-pillar-pill">Productivity</span>
           </div>
-          <h3>Mobile Workspace On The Move</h3>
-          <p>Quiet, air-conditioned interiors equipped with charging ports allow team members to prepare for morning
-            meetings, answer emails, or recharge peacefully during the commute.</p>
+          <h3>Comfortable &amp; Productive</h3>
+          <p>Quiet, air-conditioned cabins allow team members to prepare for morning meetings, answer messages, or simply rest during the commute.</p>
         </div>
       </div>
 
@@ -398,7 +404,7 @@
   </a>
 
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>

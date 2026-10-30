@@ -47,6 +47,7 @@ build/
 *.tmp
 *.temp
 *~
+scratch/
 
 # Unused large assets
 images/dubai-abudhabi-intercity-route.webp

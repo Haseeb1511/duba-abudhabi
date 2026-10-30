@@ -62,12 +62,18 @@ const setTheme = theme => {
   if (themeMeta) themeMeta.content = isDark ? "#0a0a0c" : "#111111";
 };
 
-let preferredTheme = "dark";
+let preferredTheme = root.dataset.theme || "light";
 try {
-  preferredTheme = localStorage.getItem("ride-site-theme") || "dark";
-  if (preferredTheme !== "dark" && preferredTheme !== "light") preferredTheme = "dark";
+  const saved = localStorage.getItem("ride-site-theme");
+  if (saved === "dark" || saved === "light") {
+    preferredTheme = saved;
+  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    preferredTheme = "dark";
+  } else {
+    preferredTheme = "light";
+  }
 } catch (error) {
-  preferredTheme = "dark";
+  preferredTheme = root.dataset.theme || "light";
 }
 setTheme(preferredTheme);
 if (themeToggle) {
@@ -241,13 +247,15 @@ if (faqList) {
   }, true);
 }
 
-// Logo Track Auto Scroll (Continuous Infinite Seamless Loop in One Direction)
+// Logo Track Auto Scroll (Continuous Infinite Seamless Loop with IntersectionObserver Optimization)
 const initLogoRingTrack = () => {
   const ringTracks = document.querySelectorAll("#logo-ring-track, #logo-ring-track-ar");
   if (!ringTracks.length) return;
 
   ringTracks.forEach(ringTrack => {
     let isInteracting = false;
+    let isVisible = false;
+    let animationFrameId = null;
     let lastTime = performance.now();
     const speedPxPerSec = 36; // Smooth, continuous drift speed
 
@@ -276,6 +284,8 @@ const initLogoRingTrack = () => {
     };
 
     const animate = (currentTime) => {
+      if (!isVisible) return;
+
       const deltaMs = Math.min(currentTime - lastTime, 50);
       lastTime = currentTime;
 
@@ -284,7 +294,6 @@ const initLogoRingTrack = () => {
         const loopDist = getLoopDistance();
 
         if (isRtl) {
-          // Continuous circular motion in RTL mode
           if (ringTrack.scrollLeft <= 0) {
             ringTrack.scrollLeft -= move;
             if (Math.abs(ringTrack.scrollLeft) >= loopDist) {
@@ -297,7 +306,6 @@ const initLogoRingTrack = () => {
             }
           }
         } else {
-          // Continuous circular motion in one direction
           ringTrack.scrollLeft += move;
           if (ringTrack.scrollLeft >= loopDist) {
             ringTrack.scrollLeft -= loopDist;
@@ -305,10 +313,32 @@ const initLogoRingTrack = () => {
         }
       }
 
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
-    requestAnimationFrame(animate);
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            isVisible = true;
+            lastTime = performance.now();
+            if (!animationFrameId) {
+              animationFrameId = requestAnimationFrame(animate);
+            }
+          } else {
+            isVisible = false;
+            if (animationFrameId) {
+              cancelAnimationFrame(animationFrameId);
+              animationFrameId = null;
+            }
+          }
+        });
+      }, { threshold: 0.05 });
+      observer.observe(ringTrack);
+    } else {
+      isVisible = true;
+      animationFrameId = requestAnimationFrame(animate);
+    }
   });
 };
 
@@ -329,7 +359,6 @@ const initCorridorScroller = () => {
 
   let currentPercent = 0;
   let isDragging = false;
-  let userInteracted = false;
 
   const updatePosition = (percent, triggerSource = "script") => {
     percent = Math.max(0, Math.min(100, percent));
@@ -337,16 +366,18 @@ const initCorridorScroller = () => {
 
     if (fill) fill.style.width = `${percent}%`;
     if (handle) {
+      handle.style.top = "50%";
       if (isRtl) {
         handle.style.left = "auto";
         handle.style.right = `${percent}%`;
       } else {
         handle.style.left = `${percent}%`;
+        handle.style.right = "auto";
       }
     }
 
     const currentKm = Math.round((percent / 100) * 150);
-    if (kmBadge) kmBadge.textContent = `${currentKm} KM`;
+    if (kmBadge) kmBadge.textContent = isRtl ? `${currentKm} كم` : `${currentKm} KM`;
 
     let activeMilestone = milestones[0];
     milestones.forEach(m => {
@@ -373,7 +404,6 @@ const initCorridorScroller = () => {
 
   milestones.forEach(m => {
     m.addEventListener("click", () => {
-      userInteracted = true;
       const targetPercent = parseFloat(m.dataset.percent);
       updatePosition(targetPercent, "click");
     });
@@ -389,29 +419,77 @@ const initCorridorScroller = () => {
   };
 
   if (handle) {
-    handle.addEventListener("mousedown", () => { isDragging = true; userInteracted = true; });
-    handle.addEventListener("touchstart", () => { isDragging = true; userInteracted = true; }, { passive: true });
+    handle.addEventListener("mousedown", () => {
+      isDragging = true;
+      handle.classList.add("is-dragging");
+      if (fill) fill.classList.add("is-dragging");
+    });
+    handle.addEventListener("touchstart", () => {
+      isDragging = true;
+      handle.classList.add("is-dragging");
+      if (fill) fill.classList.add("is-dragging");
+    }, { passive: true });
   }
 
   window.addEventListener("mousemove", handleDrag);
   window.addEventListener("touchmove", handleDrag, { passive: true });
 
-  const stopDrag = () => { isDragging = false; };
+  const stopDrag = () => {
+    if (isDragging) {
+      isDragging = false;
+      if (handle) handle.classList.remove("is-dragging");
+      if (fill) fill.classList.remove("is-dragging");
+    }
+  };
   window.addEventListener("mouseup", stopDrag);
   window.addEventListener("touchend", stopDrag);
 
+  // Animate the 150 km corridor stat odometer when entering view
+  const statValEl = document.querySelector(".route-corridor-stat .corridor-stat-val");
+  let statAnimated = false;
+  const animateOdometer = () => {
+    if (!statValEl || statAnimated) return;
+    const rect = statValEl.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+      statAnimated = true;
+      const targetVal = 150;
+      const duration = 1400;
+      const startTime = performance.now();
+      const step = now => {
+        const elapsed = now - startTime;
+        const progress = Math.min(1, elapsed / duration);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(targetVal * ease);
+        statValEl.textContent = isRtl ? `${current} كم` : `${current} km`;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+  };
+
   let ticking = false;
   window.addEventListener("scroll", () => {
-    if (userInteracted && isDragging) return;
+    animateOdometer();
+    if (isDragging) return;
     if (!ticking) {
       window.requestAnimationFrame(() => {
-        const rect = scroller.getBoundingClientRect();
+        const spotlight = document.querySelector(".route-corridor-spotlight");
         const windowHeight = window.innerHeight;
 
-        if (rect.top < windowHeight * 0.88 && rect.bottom > windowHeight * 0.12) {
-          const totalDistance = windowHeight * 0.75;
-          const currentProgress = (windowHeight * 0.88 - rect.top) / totalDistance;
-          const progressPercent = Math.max(0, Math.min(100, currentProgress * 100));
+        const topElement = spotlight || scroller;
+        const topRect = topElement.getBoundingClientRect();
+        const scrollerRect = scroller.getBoundingClientRect();
+
+        // Start driving when the 150 KM corridor section enters the viewport
+        const startPoint = windowHeight * 0.88;
+        const totalDistance = (scrollerRect.bottom - topRect.top) + (windowHeight * 0.35);
+        const distanceCovered = startPoint - topRect.top;
+
+        if (totalDistance > 0) {
+          const rawProgress = distanceCovered / totalDistance;
+          const progressPercent = Math.max(0, Math.min(100, rawProgress * 100));
           updatePosition(progressPercent, "scroll");
         }
         ticking = false;
@@ -420,8 +498,52 @@ const initCorridorScroller = () => {
     }
   }, { passive: true });
 
+  window.addEventListener("resize", () => {
+    updatePosition(currentPercent, "resize");
+  });
+
+  // Initial check on load
+  animateOdometer();
   updatePosition(0);
 };
 
+// ===== MOBILE PLAN TABS & LOCATION COVERAGE ACCORDION =====
+const initMobileDeclutter = () => {
+  const planTabs = selectAll("[data-plan-tab]");
+  const planCards = selectAll("[data-plan-card]");
+  if (planTabs.length && planCards.length) {
+    planTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const idx = tab.dataset.planTab;
+        planTabs.forEach(t => {
+          const active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", String(active));
+        });
+        planCards.forEach(card => {
+          card.classList.toggle("is-active-plan", card.dataset.planCard === idx);
+        });
+      });
+    });
+  }
+
+  const locationToggles = selectAll("[data-location-toggle]");
+  locationToggles.forEach(btn => {
+    const card = btn.closest(".location-coverage-card");
+    if (!card) return;
+    const labelSpan = btn.querySelector("span:first-child");
+    const defaultText = labelSpan ? labelSpan.textContent : "Show all areas";
+    btn.addEventListener("click", () => {
+      const expanded = card.classList.toggle("is-expanded");
+      btn.setAttribute("aria-expanded", String(expanded));
+      if (labelSpan) {
+        labelSpan.textContent = expanded ? "Show fewer areas" : defaultText;
+      }
+    });
+  });
+};
+
+initMobileDeclutter();
 initCorridorScroller();
+
 

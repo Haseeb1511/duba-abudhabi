@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="dark">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>مشاوير دبي إلى أبوظبي | خدمة توصيل يومية وسيارات خاصة</title>
@@ -25,7 +36,7 @@
   <meta name="twitter:image" content="https://dubaitoabudhabilift.com/images/og-image.jpg">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body class="arabic-page">
@@ -84,21 +95,48 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> من دبي إلى أبوظبي</p>
-          <h1>خطّط لمشوارك من <span class="hero-title-gold">دبي إلى أبوظبي</span></h1>
-          <p class="hero-lead">أكثر من 5 أعوام من الخبرة المتخصصة يومياً على طريق الشيخ زايد E11، مع نقل أكثر من 5,000
-            راكب بأمان. اختر بين التوصيل المشترك الاقتصادي أو السيارة الخاصة، مع أسعار واضحة ومحددة مسبقاً.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> متخصصو طريق E11 · يومياً و24/7</p>
+          <h1>رحلات يومية دبي ⇄ أبوظبي <span class="hero-title-gold">تبدأ من 150 درهماً</span></h1>
+          <p class="hero-lead">توصيل يومي موثوق من الباب للباب بين دبي وأبوظبي — اختر التوصيل المشترك أو سيارة خاصة VIP بأسعار ثابتة ومحددة مسبقاً شاملة سالك ودرب.</p>
           <div class="hero-actions"><a class="button button-primary" href="#" data-whatsapp
               data-message="مرحباً، أرغب في حجز مشوار من دبي إلى أبوظبي. يرجى إفادتي بالتوفر والسعر.">احجز مشواراً عبر
               واتساب <span aria-hidden="true">←</span></a><button class="button button-secondary call-button"
-              type="button" data-call-now aria-describedby="call-setup-note">اتصل الآن <span
+              type="button" data-call-now>اتصل الآن <span
                 aria-hidden="true">☎</span></button></div>
-          <p class="call-note" id="call-setup-note" data-call-note hidden>سيعمل زر الاتصال بمجرد إضافة رقم الهاتف.</p>
           <ul class="hero-points" aria-label="نظرة عامة على الخدمة">
-            <li><span aria-hidden="true">✓</span> أكثر من 5 أعوام خبرة يومية مخصصة على ممر E11 بين دبي وأبوظبي</li>
-            <li><span aria-hidden="true">✓</span> نقل أكثر من 5,000 راكب بأمان من الباب للباب</li>
-            <li><span aria-hidden="true">✓</span> تأكيد السعر والتوفر مسبقاً وبكل شفافية قبل الانطلاق</li>
+            <li><span aria-hidden="true">✓</span> <strong>خبرة 5+ أعوام</strong> على طريق E11</li>
+            <li><span aria-hidden="true">✓</span> <strong>5,000+ راكب</strong> من الباب للباب</li>
+            <li><span aria-hidden="true">✓</span> <strong>شامل سالك ودرب</strong> · تسعيرة ثابتة</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- خطوات الحجز السريع (3 خطوات) -->
+    <section class="how-it-works-strip" aria-label="كيف تعمل خدمة الحجز">
+      <div class="wrap">
+        <div class="how-steps-grid">
+          <div class="how-step-card">
+            <span class="how-step-num" aria-hidden="true">01</span>
+            <div class="how-step-body">
+              <h3>أرسل موقعك عبر واتساب</h3>
+              <p>شارك حي الانطلاق في دبي أو أبوظبي وموعد الفترة المفضل لديك.</p>
+            </div>
+          </div>
+          <div class="how-step-card">
+            <span class="how-step-num" aria-hidden="true">02</span>
+            <div class="how-step-body">
+              <h3>احصل على تسعيرة ثابتة فوراً</h3>
+              <p>تأكيد فوري للسعر الشامل لبوابات سالك ودرب والوقود بدون أي رسوم خفية.</p>
+            </div>
+          </div>
+          <div class="how-step-card">
+            <span class="how-step-num" aria-hidden="true">03</span>
+            <div class="how-step-body">
+              <h3>انطلاق من باب منزلك أو مكتبك</h3>
+              <p>يصلك سائقنا المرخص في الموعد المحدد لتنقل مباشر ومريح عبر E11.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -112,46 +150,46 @@
         <div class="logo-ring-wrapper">
           <div class="logo-ring-track" id="logo-ring-track-ar">
             <div class="ring-logo-item" title="حكومة أبوظبي"><img src="images/logos/abu-dhabi-gov.svg" width="160"
-                height="38" alt="حكومة أبوظبي" loading="lazy"></div>
+                height="38" alt="حكومة أبوظبي" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="شركة مبادلة للاستثمار"><img src="images/logos/mubadala.svg" width="160"
-                height="38" alt="مبادلة" loading="lazy"></div>
+                height="38" alt="مبادلة" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="سوق أبوظبي العالمي ADGM"><img src="images/logos/adgm.svg" width="160"
-                height="38" alt="سوق أبوظبي العالمي" loading="lazy"></div>
+                height="38" alt="سوق أبوظبي العالمي" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="مجموعة أدنوك ADNOC"><img src="images/logos/adnoc.svg" width="160"
-                height="38" alt="أدنوك" loading="lazy"></div>
+                height="38" alt="أدنوك" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="بنك أبوظبي الأول FAB"><img src="images/logos/fab.svg" width="160"
-                height="38" alt="بنك أبوظبي الأول" loading="lazy"></div>
+                height="38" alt="بنك أبوظبي الأول" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="شركة أبوظبي الوطنية للتأمين ADNIC"><img src="images/logos/adnic.svg"
-                width="160" height="38" alt="أدنيك للتأمين" loading="lazy"></div>
+                width="160" height="38" alt="أدنيك للتأمين" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="بنك أبوظبي التجاري ADCB"><img src="images/logos/adcb.svg" width="160"
-                height="38" alt="بنك أبوظبي التجاري" loading="lazy"></div>
+                height="38" alt="بنك أبوظبي التجاري" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="مصرف أبوظبي الإسلامي ADIB"><img src="images/logos/adib.svg" width="160"
-                height="38" alt="مصرف أبوظبي الإسلامي" loading="lazy"></div>
+                height="38" alt="مصرف أبوظبي الإسلامي" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="مركز أبوظبي الوطني للمعارض ADNEC"><img src="images/logos/adnec.svg"
-                width="160" height="38" alt="أدنيك" loading="lazy"></div>
+                width="160" height="38" alt="أدنيك" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" title="الاتحاد للطيران Etihad"><img src="images/logos/etihad.svg" width="160"
-                height="38" alt="الاتحاد للطيران" loading="lazy"></div>
+                height="38" alt="الاتحاد للطيران" loading="lazy" decoding="async"></div>
             <!-- Duplicated items for smooth continuous loop -->
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/abu-dhabi-gov.svg" width="160"
-                height="38" alt="" loading="lazy"></div>
+                height="38" alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/mubadala.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/adgm.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/adnoc.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/fab.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/adnic.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/adcb.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/adib.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/adnec.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
             <div class="ring-logo-item" aria-hidden="true"><img src="images/logos/etihad.svg" width="160" height="38"
-                alt="" loading="lazy"></div>
+                alt="" loading="lazy" decoding="async"></div>
           </div>
         </div>
       </div>
@@ -192,7 +230,7 @@
       <div class="wrap about-container">
         <div class="about-header">
           <div class="about-pill-badge">
-            <span class="badge-icon">📍</span>
+            <svg class="inline-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>خبرة أكثر من 5 سنوات • متخصصون على طريق E11</span>
           </div>
           <h2 id="about-heading-ar">من نحن · متخصصو النقل بين دبي وأبوظبي</h2>
@@ -203,19 +241,19 @@
         <div class="about-stats-bar" aria-label="أرقام وإنجازات الخدمة">
           <div class="about-stat-item">
             <div class="about-stat-number">5<sup>+</sup></div>
-            <div class="about-stat-label">سنوات خبرة متخصصة</div>
+            <div class="about-stat-label">سنوات على هذا المسار</div>
           </div>
           <div class="about-stat-item">
             <div class="about-stat-number">8</div>
-            <div class="about-stat-label">سيارات حديثة ومكيفة</div>
+            <div class="about-stat-label">سيارات نظيفة ومكيفة</div>
           </div>
           <div class="about-stat-item">
             <div class="about-stat-number">5,000<sup>+</sup></div>
-            <div class="about-stat-label">راكب تم نقلهم بأمان</div>
+            <div class="about-stat-label">ركاب تم خدمتهم</div>
           </div>
           <div class="about-stat-item">
             <div class="about-stat-number">99.4<sup>%</sup></div>
-            <div class="about-stat-label">نسبة الالتزام بالمواعيد</div>
+            <div class="about-stat-label">دقة الالتزام بالمواعيد</div>
           </div>
         </div>
 
@@ -223,21 +261,18 @@
         <div class="about-story-grid">
           <div class="about-story-left">
             <div class="about-story-block">
-              <span class="about-story-tag">📍 تخصص حصري على ممر E11 (لأكثر من 5 سنوات)</span>
-              <p>يضمن تركيزنا الحصري على هذا المسار تجنب إرهاق السفر اليومي مع خدمة مباشرة من الباب للباب دون تبديل
-                سيارات. ومع ربط مراكز الأعمال من مركز دبي المالي العالمي (DIFC) ووسط دبي إلى سوق أبوظبي العالمي (ADGM)
-                وجزيرة الريم، يتقن سائقونا كل اختناقات طريق الشيخ زايد ومواقيت بوابات سالك ودرب لضمان دقة المواعيد.</p>
+              <span class="about-story-tag">نسافر على هذا الطريق كل يوم</span>
+              <p>القيادة اليومية بين دبي وأبوظبي مرهقة ومكلفة. تخصصنا الكامل في هذا المسار جعل سائقينا على دراية تامة بحركة السير، ومواعيد الذروة، وبوابات التعرفة (سالك ودرب)، وأفضل الطرق المباشرة من دبي مارينا ووسط دبي إلى سوق أبوظبي العالمي (ADGM) ومركز المدينة. نأخذك من باب بيتك ونوصلك مباشرة إلى وجهتك دون أي عناء.</p>
             </div>
-            <div class="about-story-block">
-              <span class="about-story-tag">🚗 أسطول حديث وسائقون محترفون ومعتمدون</span>
-              <p>من خلال أسطول مجهز بعناية من سيارات MPV العائلية وسيارات الدفع الرباعي SUV الفاخرة والمكيفة، نوفر
-                تنقلاً آمناً ومريحاً يناسب جدولك. من التنقل اليومي إلى التوصيل التنفيذي الخاص، يتولى سائقونا المعتمدون
-                القيادة بأعلى معايير الأمان واللباقة لتصل إلى وجهتك بكامل نشاطك.</p>
+            <div class="about-story-block about-story-secondary">
+              <span class="about-story-tag">سيارات نظيفة وسائقون محترمون</span>
+              <p>جميع سياراتنا نظيفة وواسعة ومكيفة بالكامل—معظمها سيارات عائلية وسيارات دفع رباعي حديثة مثل كيا كرنفال وتويوتا جراند هايلاندر. سائقونا مرخصون، ويتعاملون بلباقة واحترام، وملتزمون دائماً بالسرعات القانونية. سواء اخترت مشاركة المشوار للتوفير أو حجزت سيارة خاصة لنفسك، رحلتك معنا سهلة ومريحة.</p>
             </div>
+            <a href="about.html" class="text-link about-more-link">اقرأ المزيد عن قصتنا ومعاييرنا <span aria-hidden="true">←</span></a>
           </div>
           <div class="about-story-right">
             <div class="about-story-image-wrap">
-              <img src="images/fleet/toyota-grand-highlander-clean.jpg" alt="سيارة تويوتا جراند هايلاندر" width="800"
+              <img src="images/fleet/toyota-grand-highlander-clean.webp" alt="سيارة تويوتا جراند هايلاندر" width="800"
                 height="500" loading="lazy" decoding="async">
             </div>
           </div>
@@ -258,11 +293,16 @@
 
         <!-- 3 Core Commute Plans -->
         <div class="commute-plans-overview" aria-label="باقات الدوام الأساسية">
+          <div class="plan-tabs-mobile" role="tablist" aria-label="اختر باقة التنقل">
+            <button type="button" class="plan-tab-btn is-active" role="tab" aria-selected="true" data-plan-tab="0">مشاوير يومية</button>
+            <button type="button" class="plan-tab-btn" role="tab" aria-selected="false" data-plan-tab="1">باقة أسبوعية</button>
+            <button type="button" class="plan-tab-btn" role="tab" aria-selected="false" data-plan-tab="2">اشتراك شهري</button>
+          </div>
           <div class="commute-plans-grid">
             <!-- Plan 1: Daily Commute -->
-            <article class="plan-overview-card">
+            <article class="plan-overview-card is-active-plan" data-plan-card="0">
               <div class="plan-header">
-                <span class="plan-badge">⚡ رحلات يومية عند الطلب</span>
+                <span class="plan-badge">رحلات يومية عند الطلب</span>
                 <h3 class="plan-title">مشاوير يومية</h3>
                 <p class="plan-subtitle">مشوار فردي باتجاه واحد أو ذهاب وعودة في نفس اليوم</p>
               </div>
@@ -273,20 +313,20 @@
               </div>
               <div class="plan-rates-box">
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 مشترك</span> اتجاه واحد</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">مشترك</span> اتجاه واحد</span>
                   <span class="plan-rate-price">150 درهماً</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 مشترك</span> ذهاب وعودة</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">مشترك</span> ذهاب وعودة</span>
                   <span class="plan-rate-price">220 درهماً</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 خاص</span> سيارة فردية (اتجاه
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">خاص</span> سيارة فردية (اتجاه
                     واحد)</span>
                   <span class="plan-rate-price">من 250 درهماً</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 خاص</span> سيارة ذهاب
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">خاص</span> سيارة ذهاب
                     وعودة</span>
                   <span class="plan-rate-price">من 450 درهماً</span>
                 </div>
@@ -297,8 +337,8 @@
                 <li><span aria-hidden="true">✓</span> سيارات فان وSUV حديثة ومكيفة مع مساحة للأمتعة</li>
               </ul>
               <div class="plan-schedule-clean">
-                <div class="plan-booking-hint"><span aria-hidden="true">⏱️</span> <span><strong>مهلة الحجز:</strong> قبل
-                    2 إلى 4 ساعات (أو الليلة السابقة لرحلة 7:20 ص)</span></div>
+                <div class="plan-booking-hint"><span><strong>مهلة الحجز:</strong> قبل
+                    2 إلى 4 ساعات (أو الليلة السابقة لرحلة 7:30 ص)</span></div>
               </div>
               <div class="plan-action">
                 <a class="button button-primary plan-cta-btn" href="#" data-whatsapp
@@ -314,9 +354,9 @@
             </article>
 
             <!-- Plan 2: Weekly Pass -->
-            <article class="plan-overview-card">
+            <article class="plan-overview-card" data-plan-card="1">
               <div class="plan-header">
-                <span class="plan-badge">📅 باقة أسبوعية للدوام</span>
+                <span class="plan-badge">باقة أسبوعية للدوام</span>
                 <h3 class="plan-title">باقة أسبوعية</h3>
                 <p class="plan-subtitle">5 أيام عمل متتالية من الإثنين إلى الجمعة ذهاباً وإياباً</p>
               </div>
@@ -327,22 +367,22 @@
               </div>
               <div class="plan-rates-box">
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 مشترك</span> مقعد أسبوعي (5
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">مشترك</span> مقعد أسبوعي (5
                     أيام)</span>
                   <span class="plan-rate-price">550 درهماً / أسبوع</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 خاص</span> سيارة خاصة
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">خاص</span> سيارة خاصة
                     للدوام</span>
                   <span class="plan-rate-price">من 1,400 درهم / أسبوع</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🚪 توصيل</span> من الباب إلى
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">توصيل</span> من الباب إلى
                     الباب</span>
                   <span class="plan-rate-price plan-included">شامل</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🛣️ سالك</span> سالك ودرب
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">سالك</span> سالك ودرب
                     والوقود</span>
                   <span class="plan-rate-price plan-included">شامل</span>
                 </div>
@@ -353,7 +393,7 @@
                 <li><span aria-hidden="true">✓</span> سائقون محترفون ومرخصون للتنقل على الطريق السريع</li>
               </ul>
               <div class="plan-schedule-clean">
-                <div class="plan-booking-hint"><span aria-hidden="true">⏱️</span> <span><strong>مهلة الحجز:</strong> قبل
+                <div class="plan-booking-hint"><span><strong>مهلة الحجز:</strong> قبل
                     24 ساعة (تأكيد عصر الأحد لتثبيت مقعدك)</span></div>
               </div>
               <div class="plan-action">
@@ -370,10 +410,10 @@
             </article>
 
             <!-- Plan 3: Monthly Commute -->
-            <article class="plan-overview-card plan-featured">
+            <article class="plan-overview-card plan-featured" data-plan-card="2">
               <div class="plan-border-beam" aria-hidden="true"></div>
               <div class="plan-header">
-                <span class="plan-badge">⭐ اشتراك شهري شامل</span>
+                <span class="plan-badge">اشتراك شهري شامل</span>
                 <h3 class="plan-title">اشتراك شهري</h3>
                 <p class="plan-subtitle">اشتراك دوام كامل للشهر (من الإثنين إلى الجمعة · 20 إلى 22 يوم عمل)</p>
               </div>
@@ -384,21 +424,21 @@
               </div>
               <div class="plan-rates-box">
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 مشترك</span> مقعد دوام
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">مشترك</span> مقعد دوام
                     شهري</span>
                   <span class="plan-rate-price">2,500 درهم / شهر</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 خاص</span> سيارة خاصة VIP</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">خاص</span> سيارة خاصة VIP</span>
                   <span class="plan-rate-price">من 7,000 درهم / شهر</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🚪 توصيل</span> من الباب إلى
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">توصيل</span> من الباب إلى
                     الباب</span>
                   <span class="plan-rate-price plan-included">شامل</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🛣️ سالك</span> سالك ودرب
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">سالك</span> سالك ودرب
                     والوقود</span>
                   <span class="plan-rate-price plan-included">شامل</span>
                 </div>
@@ -409,7 +449,7 @@
                 <li><span aria-hidden="true">✓</span> أولوية الدعم عبر واتساب ومرونة كاملة في مواعيد الشفتات</li>
               </ul>
               <div class="plan-schedule-clean">
-                <div class="plan-booking-hint"><span aria-hidden="true">⏱️</span> <span><strong>مهلة الحجز:</strong> قبل
+                <div class="plan-booking-hint"><span><strong>مهلة الحجز:</strong> قبل
                     24 إلى 48 ساعة (لتخصيص السيارة وتثبيت السائق)</span></div>
               </div>
               <div class="plan-action">
@@ -429,7 +469,7 @@
 
 
         <div class="fare-location-card">
-          <div class="fare-location-icon" aria-hidden="true">📍</div>
+          <div class="fare-location-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div class="fare-location-content">
             <h4>تسعير محدد حسب المنطقة</h4>
             <p>تختلف الأسعار بحسب الحي (وسط المدينة، مارينا، البرشاء، DIP). شارك موقعك عبر واتساب للحصول على سعر ثابت
@@ -450,7 +490,7 @@
           <!-- بطاقة فترات الصباح -->
           <div class="shift-column-group">
             <div class="shift-group-header">
-              <span class="shift-group-icon" aria-hidden="true">🌅</span>
+              <span class="shift-group-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg></span>
               <div class="shift-group-info">
                 <h3 class="shift-group-title">فترات الصباح</h3>
                 <div class="shift-group-route">من دبي ➔ إلى أبوظبي</div>
@@ -479,7 +519,7 @@
           <!-- بطاقة فترات المساء -->
           <div class="shift-column-group">
             <div class="shift-group-header">
-              <span class="shift-group-icon" aria-hidden="true">🌇</span>
+              <span class="shift-group-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10V2"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m16 6-4 4-4-4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg></span>
               <div class="shift-group-info">
                 <h3 class="shift-group-title">فترات العودة المسائية</h3>
                 <div class="shift-group-route">من أبوظبي ➔ إلى دبي</div>
@@ -528,7 +568,7 @@
           <!-- Service Card 1: School & Campus Lift -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-school">🎓 المدارس والجامعات</span>
+              <span class="service-pill-badge badge-school">المدارس والجامعات</span>
               <span class="service-meta-tag">الإثنين – الجمعة</span>
             </div>
             <div class="service-card-icon-wrap icon-school" aria-hidden="true">
@@ -548,7 +588,7 @@
             <ul class="service-card-features">
               <li><span class="feature-check" aria-hidden="true">✓</span> توصيل مباشر من باب البيت إلى الصرح التعليمي
               </li>
-              <li><span class="feature-check" aria-hidden="true">✓</span> وصول 7:20 صباحاً ومناوبات عودة 3:30 عصراً</li>
+              <li><span class="feature-check" aria-hidden="true">✓</span> انطلاق 7:30 صباحاً ومناوبات عودة 3:30 عصراً</li>
             </ul>
             <div class="service-card-footer">
               <div class="service-rate-hint">
@@ -566,7 +606,7 @@
           <!-- Service Card 2: Private Car Lift -->
           <article class="service-preview-card service-featured">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-private">🚗 رحلات خاصة VIP</span>
+              <span class="service-pill-badge badge-private">رحلات خاصة VIP</span>
               <span class="service-meta-tag">24/7 عند الطلب</span>
             </div>
             <div class="service-card-icon-wrap icon-private" aria-hidden="true">
@@ -603,7 +643,7 @@
           <!-- Service Card 3: Corporate Car Lift -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-corporate">🏢 الشركات وفرق العمل</span>
+              <span class="service-pill-badge badge-corporate">الشركات وفرق العمل</span>
               <span class="service-meta-tag">8 مناوبات يومية</span>
             </div>
             <div class="service-card-icon-wrap icon-corporate" aria-hidden="true">
@@ -645,7 +685,7 @@
           <!-- Service Card 4: Taxi Service -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-taxi">🚕 تاكسي بين المدن</span>
+              <span class="service-pill-badge badge-taxi">تاكسي بين المدن</span>
               <span class="service-meta-tag">طلب فوري 24/7</span>
             </div>
             <div class="service-card-icon-wrap icon-taxi" aria-hidden="true">
@@ -685,7 +725,7 @@
           <!-- Service Card 5: Ladies Car Lift -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-ladies">🌸 كار لفت سيدات</span>
+              <span class="service-pill-badge badge-ladies">كار لفت سيدات</span>
               <span class="service-meta-tag">أمان وخصوصية تامة</span>
             </div>
             <div class="service-card-icon-wrap icon-ladies" aria-hidden="true">
@@ -741,99 +781,99 @@
             disabled>←</button><span class="vehicle-count" data-vehicle-count aria-live="polite">1 / 8</span><button
             class="carousel-button" type="button" data-vehicle-next aria-label="السيارة التالية">→</button></div>
         <div class="vehicle-grid" id="vehicle-grid">
-          <article class="vehicle-card"><img src="images/Kia Carnival_gimini.jpg" width="800" height="500"
-              alt="صورة توضيحية لكيا كرنفال" loading="lazy">
+          <article class="vehicle-card"><img src="images/kia-carnival.webp" width="800" height="500"
+              alt="صورة توضيحية لكيا كرنفال" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Kia Carnival</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: كيا كرنفال - Kia Carnival (MPV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز كيا كرنفال عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16" height="16"
                   fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Kia Sedona_gimini.jpg" width="800" height="500"
-              alt="صورة توضيحية لكيا سيدونا" loading="lazy">
+          <article class="vehicle-card"><img src="images/kia-sedona.webp" width="800" height="500"
+              alt="صورة توضيحية لكيا سيدونا" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Kia Sedona</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: كيا سيدونا - Kia Sedona (MPV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز كيا سيدونا عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16" height="16"
                   fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Honda Odyssey.png" width="800" height="500"
-              alt="صورة توضيحية لهوندا أوديسي" loading="lazy">
+          <article class="vehicle-card"><img src="images/honda-odyssey.webp" width="800" height="500"
+              alt="صورة توضيحية لهوندا أوديسي" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Honda Odyssey</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: هوندا أوديسي - Honda Odyssey (MPV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز هوندا أوديسي عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Toyota Grand Highlander_gimini.jpg" width="800" height="500"
-              alt="صورة توضيحية لتويوتا جراند هايلاندر" loading="lazy">
+          <article class="vehicle-card"><img src="images/toyota-grand-highlander.webp" width="800" height="500"
+              alt="صورة توضيحية لتويوتا جراند هايلاندر" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">SUV</span>
               <h3>Toyota Grand Highlander</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: تويوتا جراند هايلاندر - Toyota Grand Highlander (SUV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز تويوتا جراند هايلاندر عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Toyota Previa_chatgpt.png" width="800" height="500"
-              alt="صورة توضيحية لتويوتا بريفيا" loading="lazy">
+          <article class="vehicle-card"><img src="images/toyota-previa.webp" width="800" height="500"
+              alt="صورة توضيحية لتويوتا بريفيا" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Toyota Previa</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: تويوتا بريفيا - Toyota Previa (MPV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز تويوتا بريفيا عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Toyota Sienna_chatgpt.png" width="800" height="500"
-              alt="صورة توضيحية لتويوتا سيينا" loading="lazy">
+          <article class="vehicle-card"><img src="images/toyota-sienna.webp" width="800" height="500"
+              alt="صورة توضيحية لتويوتا سيينا" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Toyota Sienna</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: تويوتا سيينا - Toyota Sienna (MPV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز تويوتا سيينا عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Nissan Altima_chatgpt.png" width="800" height="500"
-              alt="صورة توضيحية لنيسان التيما" loading="lazy">
+          <article class="vehicle-card"><img src="images/nissan-altima.webp" width="800" height="500"
+              alt="صورة توضيحية لنيسان التيما" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">سيدان</span>
               <h3>Nissan Altima</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: نيسان التيما - Nissan Altima (سيدان). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز نيسان التيما عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Nissan Quest_gimini.jpg" width="800" height="500"
-              alt="صورة توضيحية لنيسان كويست" loading="lazy">
+          <article class="vehicle-card"><img src="images/nissan-quest.webp" width="800" height="500"
+              alt="صورة توضيحية لنيسان كويست" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Nissan Quest</h3><a class="button button-vehicle-book" href="#" data-whatsapp
                 data-message="مرحباً، أود حجز مشوار من دبي إلى أبوظبي. لقد اخترت هذه السيارة: نيسان كويست - Nissan Quest (MPV). يرجى تأكيد التوفر والسعر."
                 aria-label="احجز نيسان كويست عبر واتساب"><svg class="wa-icon" viewBox="0 0 24 24" width="16" height="16"
                   fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
                 </svg><span>احجز هذه السيارة</span></a>
             </div>
           </article>
@@ -846,55 +886,54 @@
     <section class="section drivers-home-section" id="drivers" aria-labelledby="drivers-heading">
       <div class="wrap">
         <div class="drivers-home-header">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> معايير السائقين والقيادة الآمنة</p>
-          <h2 id="drivers-heading">سائقونا <span class="shift-title-gold">المحترفون</span></h2>
-          <p class="drivers-home-lead">نخبة من السائقين المعتمدين والمكرسين يومياً لمسار دبي ⇄ أبوظبي، لضمان تنقل يومي
-            مريح، آمن، وفي أعلى درجات الدقة والالتزام.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> الأمان والالتزام</p>
+          <h2 id="drivers-heading">سائقونا <span class="shift-title-gold">ذوو الخبرة</span></h2>
+          <p class="drivers-home-lead">سائقون معتمدون وذوو أخلاق عالية يجعلون رحلتك اليومية بين دبي وأبوظبي آمنة ودقيقة ومريحة.</p>
         </div>
 
         <div class="drivers-feature-grid" aria-label="معايير السائقين المحترفين">
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🛡️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <div class="driver-feature-text">
-              <h3>مرخصون ومعتمدون رسمياً</h3>
-              <p>رخص قيادة تجارية معتمدة ومتوافقة بالكامل مع كافة أنظمة وقوانين هيئات النقل في دولة الإمارات.</p>
+              <h3>مرخصون وخبرة طويلة في الإمارات</h3>
+              <p>يحمل كل سائق رخصة قيادة معتمدة في الدولة مع سنوات طويلة من القيادة اليومية على الطرق السريعة.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">📋</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
             <div class="driver-feature-text">
-              <h3>فحص أمني وسجل خالٍ من الحوادث</h3>
-              <p>فحص أمني وتدقيق شخصي شامل مع سجل قيادة نظيف ومثبت لضمان أقصى درجات الأمان والاطمئنان.</p>
+              <h3>سجل قيادة نظيف</h3>
+              <p>نحرص على اختيار سائقين ملتزمين بالقيادة الهادئة واحترام السرعات المحددة وقوانين السير.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🛣️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 8 5"/><path d="m16 5 4 14"/><path d="M12 6v2"/><path d="M12 11v2"/><path d="M12 16v2"/></svg></div>
             <div class="driver-feature-text">
-              <h3>خبراء طريق الشيخ زايد (E11)</h3>
-              <p>تخصص يومي كامل على الخط السريع بين دبي وأبوظبي مع دراية تامة بتدفق المسارات وسرعات الطريق.</p>
+              <h3>خبراء الطريق وحركة المرور</h3>
+              <p>بحكم قيادتهم اليومية على طريق E11، يعرف السائقون أفضل المخارج وكيفية تجنب أوقات الزحام.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">💬</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
             <div class="driver-feature-text">
-              <h3>إتقان اللغتين العربية والإنجليزية</h3>
-              <p>تواصل لبق واحترافي يضمن سهولة التنسيق للموظفين، والكوادر الحكومية، والعائلات على مدار الساعة.</p>
+              <h3>لباقة ومساعدة دائمة</h3>
+              <p>يتحدث السائقون العربية والإنجليزية بطلاقة، ويحترمون هدوءك أثناء الرحلة، ومستعدون لمساعدتك في أمتعتك.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">📵</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
             <div class="driver-feature-text">
-              <h3>أمان صارم وبدون أي تشتيت</h3>
-              <p>التزام صارم بالسرعات المحددة وسياسة حازمة تمنع منعاً باتاً استخدام الهاتف المحمول أثناء القيادة.</p>
+              <h3>قيادة آمنة وبدون هواتف</h3>
+              <p>سياسة صارمة تمنع الانشغال بالهاتف المحمول أثناء القيادة لضمان أقصى درجات الأمان لجميع الركاب.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🗺️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></div>
             <div class="driver-feature-text">
               <h3>معرفة شاملة بأحياء كلا الإمارتين</h3>
               <p>دراية عميقة بجميع المجمعات السكنية ومراكز الأعمال في دبي وأبوظبي وسلوك أفضل الطرق المختصرة.</p>
@@ -902,7 +941,7 @@
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">⏱️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <div class="driver-feature-text">
               <h3>التزام ودقة تامة بالمواعيد</h3>
               <p>متابعة مسبقة لحركة المرور على الخط لضمان الوصول في الوقت المحدد عند باب منزلك أو مقر عملك.</p>
@@ -910,7 +949,7 @@
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🧳</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/></svg></div>
             <div class="driver-feature-text">
               <h3>مساعدة بالأمتعة ومقصورات نظيفة</h3>
               <p>تعامل راقٍ ومساعدة في حمل الحقائب مع سيارات مكيفة ونظيفة ومعقمة دائماً وفق معايير الضيافة.</p>
@@ -920,18 +959,17 @@
 
         <div class="drivers-cta-card">
           <div class="drivers-cta-info">
-            <span class="drivers-cta-badge">🌟 سائقون محترفون لخدمتك يومياً</span>
+            <span class="drivers-cta-badge">سائقون محترفون لخدمتك يومياً</span>
             <h3>احجز رحلتك مع سائقينا المحترفين الآن</h3>
             <p>شاركنا موقع انطلاقك وموعدك المفضل عبر واتساب لتأكيد الحجز فوراً مع تسعيرة واضحة وشاملة لكافة الرسوم.</p>
           </div>
           <div class="drivers-cta-actions">
-            <a class="button button-primary button-wa-pulse"
-              href="https://wa.me/971508521681?text=Hi,%20I%27m%20interested%20in%20your%20car%20lift%20services.%20Please%20share%20details%20about%20pricing%20and%20availability."
+            <a class="button button-primary button-wa-pulse" href="#"
               data-whatsapp
               data-message="مرحباً، أود حجز خدمة التوصيل مع سائق محترف من دبي إلى أبوظبي. يرجى تزويدي بالتفاصيل والتوافر.">
               <svg class="wa-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
                 <path
-                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
               </svg>
               <span>احجز الآن عبر واتساب</span>
               <span aria-hidden="true">←</span>
@@ -956,11 +994,11 @@
         <!-- E11 Highway Corridor Spotlight Card (Arabic) -->
         <div class="route-corridor-spotlight">
           <div class="route-corridor-visual">
-            <img src="images/Gemini_Generated_Image_43be9143be9143be.jpg" alt="ممر دبي وأبوظبي السريع - طريق 150 كم"
+            <img src="images/dubai-abudhabi-corridor.webp" alt="ممر دبي وأبوظبي السريع - طريق 150 كم"
               width="600" height="750" loading="lazy" decoding="async">
           </div>
           <div class="route-corridor-info">
-            <span class="route-corridor-pill">📍 ممر طريق الشيخ زايد E11 المباشر</span>
+            <span class="route-corridor-pill">ممر طريق الشيخ زايد E11 المباشر</span>
             <h3>ربط سريع ومباشر على مسار 150 كم بين دبي وأبوظبي</h3>
             <p>خدمة نقل ركاب يومية مباشرة عبر ممر شارع الشيخ زايد (E11) الرئيسي من الباب إلى الباب دون توقفات أو تبديل
               محطات أو حافلات مزدحمة، لنضمن لك وصولاً سريعاً ومريحاً لمواعيد العمل والرحلات الخاصة.</p>
@@ -993,7 +1031,7 @@
               <h3>رحلة الخط السريع بين دبي وأبوظبي (150 كم)</h3>
             </div>
             <div class="corridor-active-status" id="corridor-status-pill">
-              <span class="corridor-status-icon">🚘</span>
+              <span class="corridor-status-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5v5Z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>
               <span class="corridor-status-text">نقطة الانطلاق: <strong>دبي (0 كم)</strong></span>
             </div>
           </div>
@@ -1068,7 +1106,7 @@
           <!-- Bottom Corridor Legend Bar -->
           <div class="corridor-scroller-footer">
             <div class="corridor-highway-tag">
-              <span class="hw-icon">🛣️</span>
+              <span class="hw-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 8 5"/><path d="m16 5 4 14"/><path d="M12 6v2"/><path d="M12 11v2"/><path d="M12 16v2"/></svg></span>
               <span><strong>طريق الشيخ زايد (E11)</strong> ➔ <strong>طريق الشيخ محمد بن زايد (E311)</strong></span>
             </div>
             <div class="corridor-scroll-hint">
@@ -1108,7 +1146,7 @@
               data-message="مرحباً، أود حجز مشوار من دبي مارينا/JLT إلى جزيرة المارية/الريم في أبوظبي. يرجى تزويدي بالتوفر والأسعار."><svg
                 class="wa-icon" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
                 <path
-                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
               </svg><span>استفسر عن المسار والسعر</span></a>
           </article>
 
@@ -1141,7 +1179,7 @@
               data-message="مرحباً، أود حجز مشوار من وسط دبي/الخليج التجاري إلى المنطقة الوزارية/البطين في أبوظبي. يرجى تزويدي بالأسعار."><svg
                 class="wa-icon" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
                 <path
-                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
               </svg><span>استفسر عن المسار والسعر</span></a>
           </article>
 
@@ -1174,8 +1212,47 @@
               data-message="مرحباً، أود حجز مشوار من البرشاء/JVC إلى مصفح/مدينة محمد بن زايد. يرجى تزويدي بالباقات الأسبوعية والشهرية."><svg
                 class="wa-icon" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
                 <path
-                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
               </svg><span>استفسر عن المسار والسعر</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- آراء وتقييمات الركاب اليومية -->
+    <section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading-ar">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> تقييمات الركاب</p>
+            <h2 id="reviews-heading-ar">ثقة يومية من ركاب خط دبي – أبوظبي</h2>
+          </div>
+          <p>تجارب حقيقية لموظفين وطلبة وعائلات يتنقلون معنا يومياً عبر طريق الشيخ زايد E11.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 من 5 نجوم">★★★★★</div>
+            <p class="review-quote">«مشترك في الباقة الشهرية من دبي مارينا إلى سوق أبوظبي العالمي ADGM. السائق يصل يومياً في الموعد تماماً والسيارة كيا كرنفال نظيفة ومريحة جداً.»</p>
+            <div class="review-author">
+              <strong>أحمد المنصوري</strong>
+              <span>محلل مالي · دبي مارينا ⇄ جزيرة المارية</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 من 5 نجوم">★★★★★</div>
+            <p class="review-quote">«حجزت كار لفت السيدات للتنقل اليومي من أبراج بحيرات جميرا إلى مدينة خليفة. هدوء وأمان تام والتزام بالمواعيد مع سعر ثابت يشمل كل الرسوم.»</p>
+            <div class="review-author">
+              <strong>فاطمة ح.</strong>
+              <span>هيئة تدريس جامعية · JLT ⇄ مدينة خليفة</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 من 5 نجوم">★★★★★</div>
+            <p class="review-quote">«نعتمد على خدمة السيارات الخاصة VIP في تنقلاتنا بين مركز دبي المالي والكورنيش. رد فوري عبر واتساب وسيارات حديثة وسائقون في قمة الاحترام.»</p>
+            <div class="review-author">
+              <strong>خالد العتيبي</strong>
+              <span>مستشار أعمال · DIFC ⇄ كورنيش أبوظبي</span>
+            </div>
           </article>
         </div>
       </div>
@@ -1227,11 +1304,11 @@
     <section class="section contact-section" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-copy">
-          <p class="eyebrow">حجز مباشر</p>
-          <h2>احجز مشوارك الآن</h2>
-          <p>أدخل تفاصيل رحلتك أدناه للاستفسار عن التوفر وحجز مشوارك المريح من الباب للباب.</p>
+          <p class="eyebrow">استفسار وحجز سريع</p>
+          <h2>احجز مشوارك معنا</h2>
+          <p>أدخل تفاصيل رحلتك أدناه وسنؤكد لك توفر السيارة والسعر بدقة على الفور.</p>
           <div class="contact-detail"><span class="contact-icon" aria-hidden="true">@</span>
-            <div><strong>البريد الإلكتروني (للمراجعة)</strong><a href="mailto:dubaitoabudhabilift@gmail.com"
+            <div><strong>البريد الإلكتروني</strong><a href="mailto:dubaitoabudhabilift@gmail.com"
                 data-email>dubaitoabudhabilift@gmail.com</a></div>
           </div>
         </div>
@@ -1240,21 +1317,20 @@
                 maxlength="100" placeholder="اسمك"></label><label for="customer-phone">رقم الهاتف<input
                 id="customer-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="40"
                 placeholder="مع رمز الدولة"></label></div>
-          <div class="form-row"><label for="pickup">📍 منطقة الانطلاق في دبي<input id="pickup" name="pickup" required
-                maxlength="160" placeholder="مثال: دبي مارينا أو الخليج التجاري"></label><label for="destination">🏁
-              وجهة
+          <div class="form-row"><label for="pickup">منطقة الانطلاق في دبي<input id="pickup" name="pickup" required
+                maxlength="160" placeholder="مثال: دبي مارينا أو الخليج التجاري"></label><label for="destination">وجهة
               الوصول في أبوظبي<input id="destination" name="destination" required maxlength="160"
                 placeholder="مثال: جزيرة المارية ADGM أو الكورنيش"></label></div>
           <div class="form-row"><label for="date">تاريخ السفر<input id="date" name="date" type="date"></label><label
               for="shift-time">موعد الفترة (اختياري)<select id="shift-time" name="shiftTime">
                 <option value="">أي وقت / مرن</option>
-                <optgroup label="🌅 فترات الصباح (من دبي إلى أبوظبي)">
+                <optgroup label="فترات الصباح (من دبي إلى أبوظبي)">
                   <option value="فترة الصباح: 7:30 صباحاً">صباحاً: 7:30 صباحاً</option>
                   <option value="فترة الصباح: 8:00 صباحاً">صباحاً: 8:00 صباحاً</option>
                   <option value="فترة الصباح: 8:30 صباحاً">صباحاً: 8:30 صباحاً</option>
                   <option value="فترة الصباح: 9:00 صباحاً">صباحاً: 9:00 صباحاً</option>
                 </optgroup>
-                <optgroup label="🌇 فترات العودة المسائية (من أبوظبي إلى دبي)">
+                <optgroup label="فترات العودة المسائية (من أبوظبي إلى دبي)">
                   <option value="فترة المساء: 3:30 مساءً">مساءً: 3:30 مساءً</option>
                   <option value="فترة المساء: 4:00 مساءً">مساءً: 4:00 مساءً</option>
                   <option value="فترة المساء: 4:30 مساءً">مساءً: 4:30 مساءً</option>
@@ -1338,8 +1414,25 @@
     <span class="floating-whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
+  <!-- شريط الحجز السريع للهاتف (واتساب + اتصال) -->
+  <div class="mobile-sticky-bar" role="region" aria-label="إجراءات الحجز السريع">
+    <a class="sticky-bar-wa" href="#" data-whatsapp
+      data-message="مرحباً، أود حجز مشوار بين دبي وأبوظبي. يرجى إفادتي بالتوفر والسعر.">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
+      </svg>
+      <span>احجز عبر واتساب</span>
+    </a>
+    <button type="button" class="sticky-bar-call" data-call-now>
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>اتصل الآن</span>
+    </button>
+  </div>
+
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>

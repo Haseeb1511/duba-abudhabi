@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0c">
+<meta charset="UTF-8">
+<script>
+  (function () {
+    try {
+      var s = localStorage.getItem("ride-site-theme");
+      var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = t;
+    } catch (e) {
+      document.documentElement.dataset.theme = "light";
+    }
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0c">
 <title>Our Professional Drivers | Dubai to Abu Dhabi Lift</title>
 <meta name="description" content="Discover our vetted, licensed professional chauffeurs specializing in the Dubai to Abu Dhabi E11 corridor. Background checked, multilingual, punctual, and safety-certified.">
-<link rel="canonical" href="https://dubaitoabudhabilift.com/drivers.html"><link rel="icon" href="images/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="images/apple-touch-icon.png"><link rel="stylesheet" href="css/style.css">
+<link rel="canonical" href="https://dubaitoabudhabilift.com/drivers.html"><link rel="icon" href="images/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="images/apple-touch-icon.png"><link rel="stylesheet" href="css/style.css?v=25">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -103,8 +115,8 @@
     <!-- Intro Banner -->
     <div class="drivers-intro-banner">
       <div class="drivers-intro-text">
-        <h2>Dedicated Chauffeurs, Never Random Callouts</h2>
-        <p>When you book an intercity trip between Dubai and Abu Dhabi, safety and reliability depend on the person behind the wheel. Our chauffeurs are vetted permanent professionals specifically trained on the Sheikh Zayed Road (E11) corridor, bringing executive decorum and absolute road mastery to every journey.</p>
+        <h2>Experienced, Reliable Drivers You Can Trust</h2>
+        <p>When you travel between Dubai and Abu Dhabi every day, the person behind the wheel matters most. You won't get an unknown random driver assigned at the last second. Our drivers are permanent team members with years of experience driving the E11 highway, chosen for their patience, careful driving, and polite manners.</p>
       </div>
     </div>
 
@@ -116,8 +128,8 @@
           <div class="driver-icon-box" aria-hidden="true">🛡️</div>
           <span class="driver-pillar-pill">Regulation &amp; Licensing</span>
         </div>
-        <h3>Commercial Licensing &amp; Full Legal Accreditation</h3>
-        <p>Every chauffeur on our roster holds certified UAE commercial driver licensing with full statutory compliance under UAE transport and road regulations. Each driver is legally authorized for commercial intercity passenger transport.</p>
+        <h3>Licensed &amp; UAE Experienced</h3>
+        <p>Every driver holds a valid UAE commercial driving license with years of daily highway driving experience in full compliance with UAE transport rules.</p>
       </div>
 
       <!-- 2 -->
@@ -126,8 +138,8 @@
           <div class="driver-icon-box" aria-hidden="true">📋</div>
           <span class="driver-pillar-pill">Vetting &amp; Safety</span>
         </div>
-        <h3>Exhaustive Background Screening &amp; Clean Records</h3>
-        <p>Safety begins before the ignition is turned. Our drivers undergo rigorous background security audits, personal identity verification, and multi-point reference checks, maintaining a verifiable, clean, and accident-free driving history.</p>
+        <h3>Clean Driving Records</h3>
+        <p>We only work with careful drivers who have clean safety records and respect highway speed limits. Your safety on the road is always the top priority.</p>
       </div>
 
       <!-- 3 -->
@@ -136,8 +148,8 @@
           <div class="driver-icon-box" aria-hidden="true">🛣️</div>
           <span class="driver-pillar-pill">Route Mastery</span>
         </div>
-        <h3>Dedicated E11 Corridor Highway Specialists</h3>
-        <p>Unlike general city taxi operators, our team specializes specifically on the Sheikh Zayed Road (E11) corridor. They master highway lane etiquette, toll plaza flow, variable weather visibility, and high-speed corridor safety protocols.</p>
+        <h3>Route &amp; Traffic Experts</h3>
+        <p>Because they drive the Dubai–Abu Dhabi route every day, they know the best exits, lane patterns, toll gates, and how to steer clear of heavy rush-hour jams.</p>
       </div>
 
       <!-- 4 -->
@@ -146,8 +158,8 @@
           <div class="driver-icon-box" aria-hidden="true">💬</div>
           <span class="driver-pillar-pill">Hospitality &amp; Language</span>
         </div>
-        <h3>Bilingual Professional Fluency (English &amp; Arabic)</h3>
-        <p>Courteous, articulate, and respectful. Our chauffeurs communicate clearly in both English and Arabic, ensuring seamless coordination for multinational corporate professionals, government staff, and daily commuters.</p>
+        <h3>Polite &amp; Helpful</h3>
+        <p>Fluent in English and Arabic, polite, and respectful of your quiet time during the commute. Always happy to assist you with your bags.</p>
       </div>
 
       <!-- 5 -->
@@ -156,8 +168,8 @@
           <div class="driver-icon-box" aria-hidden="true">📵</div>
           <span class="driver-pillar-pill">Cabin Protocol</span>
         </div>
-        <h3>Strict Safety Standards &amp; Zero Distraction</h3>
-        <p>We enforce an uncompromising zero-tolerance policy regarding mobile phone usage and speed limit compliance while vehicles are in motion. Your commute remains tranquil, safe, and smoothly driven at all times.</p>
+        <h3>Safe Driving, No Phones</h3>
+        <p>Zero phone distractions while behind the wheel. Our drivers follow legal highway speed limits and keep their attention 100% focused on the road.</p>
       </div>
 
       <!-- 6 -->
@@ -166,8 +178,8 @@
           <div class="driver-icon-box" aria-hidden="true">🗺️</div>
           <span class="driver-pillar-pill">Navigation</span>
         </div>
-        <h3>Dual-Emirate Neighborhood &amp; Business Hub Navigation</h3>
-        <p>In-depth local knowledge of master developments across Dubai (Downtown, Marina, JLT, Business Bay, DIP) and Abu Dhabi (Corniche, Al Reem Island, ADGM, Khalifa City, MBZ), allowing bypass of local bottleneck points.</p>
+        <h3>Knows Both Cities Well</h3>
+        <p>Familiar with residential towers, communities, and business centers across Dubai (Marina, Downtown, JLT, DIP) and Abu Dhabi (ADGM, Reem Island, Khalifa City).</p>
       </div>
 
       <!-- 7 -->
@@ -176,8 +188,8 @@
           <div class="driver-icon-box" aria-hidden="true">⏱️</div>
           <span class="driver-pillar-pill">Reliability</span>
         </div>
-        <h3>Punctual Doorstep &amp; Lobby Arrival Guarantee</h3>
-        <p>We treat your schedule with executive respect. Chauffeurs track live corridor traffic and calculate departure buffers in advance, arriving promptly at your doorstep or office entrance for every scheduled departure.</p>
+        <h3>On-Time Pickups</h3>
+        <p>Drivers check live road traffic ahead of departure so they arrive outside your building entrance a few minutes early, not late.</p>
       </div>
 
       <!-- 8 -->
@@ -260,6 +272,6 @@
   <span class="floating-whatsapp-pulse" aria-hidden="true"></span>
 </a>
 
-<script src="js/config.js" defer></script><script src="js/main.js" defer></script>
+<script src="js/config.js" defer></script><script src="js/main.js?v=25" defer></script>
 </body>
 </html>

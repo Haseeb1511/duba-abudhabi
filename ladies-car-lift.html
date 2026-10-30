@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>Ladies Car Lift Dubai to Abu Dhabi | Safe, Comfortable Female Commute</title>
@@ -16,7 +27,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body>
@@ -116,8 +127,8 @@
       <!-- Intro Banner -->
       <div class="drivers-intro-banner">
         <div class="drivers-intro-text">
-          <h2>Your Everyday Peace of Mind Across The Emirates</h2>
-          <p>Commuting 140 km along the E11 highway between Dubai and Abu Dhabi shouldn't be stressful or uncomfortable. Our Ladies Car Lift offers a peaceful, women-only passenger cabin where you can study, relax, or catch up on rest while our professional, courteous chauffeurs handle the highway drive with supreme safety.</p>
+          <h2>Safe, Comfortable Daily Commute for Ladies</h2>
+        <p>Traveling between Dubai and Abu Dhabi for work or university shouldn't be stressful. Our Ladies Car Lift offers a peaceful, women-only carpool where you can rest, study, or relax. Driven by polite, professional drivers who prioritize safe and gentle highway driving.</p>
         </div>
       </div>
 
@@ -128,8 +139,8 @@
             <div class="driver-icon-box">🛡️</div>
             <span class="driver-pillar-pill">Safe &amp; Private</span>
           </div>
-          <h3>Women-Only Commute Environment</h3>
-          <p>Exclusively arranged for female commuters, colleagues, and students. Enjoy a quiet, respectful atmosphere free from the crowding and uncertainty of public transit.</p>
+          <h3>Women-Only Commute</h3>
+        <p>Arranged specifically for female commuters, students, and colleagues. Enjoy a quiet, respectful ride free from the crowding of public transit.</p>
         </div>
 
         <div class="driver-card">
@@ -391,7 +402,7 @@
   </a>
 
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>

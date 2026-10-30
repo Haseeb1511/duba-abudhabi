@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>Dubai to Abu Dhabi Taxi Service | Direct Intercity Cab &amp; Chauffeur</title>
@@ -16,7 +27,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body>
@@ -116,8 +127,8 @@
       <!-- Intro Banner -->
       <div class="drivers-intro-banner">
         <div class="drivers-intro-text">
-          <h2>Seamless Highway Taxi Travel Without Waiting In Queues</h2>
-          <p>Skipping public bus terminals and metered taxi queues, our private intercity taxi service connects every neighborhood of Dubai directly to Abu Dhabi. Whether you are heading to an urgent morning meeting in Abu Dhabi, catching a flight at Zayed International Airport, or traveling back late at night, your chauffeur arrives right at your building entrance.</p>
+          <h2>Direct Intercity Taxi Between Dubai and Abu Dhabi</h2>
+        <p>Skip the long taxi lines and crowded bus terminals. We provide direct, fixed-price intercity rides connecting any neighborhood in Dubai straight to Abu Dhabi. Available 24/7 for business meetings, airport runs, or last-minute trips.</p>
         </div>
       </div>
 
@@ -128,8 +139,8 @@
             <div class="driver-icon-box">🏷️</div>
             <span class="driver-pillar-pill">Transparent</span>
           </div>
-          <h3>Guaranteed Fixed Pricing</h3>
-          <p>No taxi meters ticking in heavy traffic, no rush-hour multipliers, and no surprise toll charges. You receive a guaranteed all-inclusive price before your ride starts.</p>
+          <h3>Clear Fixed Pricing</h3>
+        <p>No taxi meters running up in heavy traffic, no surge pricing, and no surprise toll fees. You get a clear, all-inclusive price before the car moves.</p>
         </div>
 
         <div class="driver-card">
@@ -391,7 +402,7 @@
   </a>
 
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>

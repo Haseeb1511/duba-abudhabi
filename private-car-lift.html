@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>Private Car Lift &amp; Chauffeur Dubai to Abu Dhabi | Executive Door-to-Door</title>
@@ -16,7 +27,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body>
@@ -115,10 +126,8 @@
       <!-- Intro Banner -->
       <div class="drivers-intro-banner">
         <div class="drivers-intro-text">
-          <h2>Your Personal Chauffeur on the E11 Corridor</h2>
-          <p>Whether traveling for an executive boardroom meeting at ADGM, an international flight transfer, or a
-            comfortable family trip, our private car lift guarantees exclusive use of the entire vehicle. Your chauffeur
-            departs from your doorstep at the exact minute you specify.</p>
+          <h2>Your Own Private Car Between Dubai &amp; Abu Dhabi</h2>
+        <p>Whether you have an important meeting at ADGM, a flight to catch, or are traveling with family, our private car lift gives you the entire vehicle to yourself. Choose your exact pickup time and travel in comfort with no shared passenger stops.</p>
         </div>
       </div>
 
@@ -129,9 +138,8 @@
             <div class="driver-icon-box">⭐</div>
             <span class="driver-pillar-pill">Exclusivity</span>
           </div>
-          <h3>Entire Vehicle Reserved for You</h3>
-          <p>Zero stranger passengers. You, your colleagues, or your family have complete privacy inside the vehicle,
-            with ample luggage capacity and dedicated workspace on the move.</p>
+          <h3>Entire Vehicle for You</h3>
+          <p>No sharing with strangers. You, your family, or your colleagues have the whole car to yourselves, with plenty of room for luggage and personal space.</p>
         </div>
 
         <div class="driver-card">
@@ -139,9 +147,8 @@
             <div class="driver-icon-box">⏱️</div>
             <span class="driver-pillar-pill">Flexibility</span>
           </div>
-          <h3>Depart Anytime, 24 Hours a Day</h3>
-          <p>Unlike shared schedules with set shifts, your private trip starts when you are ready. Need a 5:30 AM
-            airport pickup or a midnight return after an event? We accommodate your timetable seamlessly.</p>
+          <h3>Leave Anytime 24/7</h3>
+          <p>Your schedule, your choice. Whether you need a 5:30 AM early morning ride or a midnight trip back home, we are ready when you are.</p>
         </div>
 
         <div class="driver-card">
@@ -149,9 +156,8 @@
             <div class="driver-icon-box">📍</div>
             <span class="driver-pillar-pill">Direct Route</span>
           </div>
-          <h3>Zero Deviation, Fastest E11 Highway Run</h3>
-          <p>No waiting for multiple passengers or circling residential clusters. The driver takes you straight onto
-            Sheikh Zayed Road (E11) and directly to your final Abu Dhabi or Dubai drop-off address.</p>
+          <h3>Direct Non-Stop Ride</h3>
+          <p>No waiting for other pickups. The driver picks you up right outside your door and drives straight to your destination via Sheikh Zayed Road (E11).</p>
         </div>
 
         <div class="driver-card">
@@ -159,9 +165,8 @@
             <div class="driver-icon-box">💼</div>
             <span class="driver-pillar-pill">Executive</span>
           </div>
-          <h3>Corporate Discretion &amp; Decorum</h3>
-          <p>Take business calls and review confidential presentations in peace. Our chauffeurs respect passenger quiet,
-            provide gentle driving, and maintain pristine vehicle interiors.</p>
+          <h3>Quiet &amp; Professional</h3>
+          <p>Need to take business calls, review documents, or just take a nap? Our drivers respect your privacy and provide a smooth, gentle ride.</p>
         </div>
       </div>
 
@@ -394,7 +399,7 @@
   </a>
 
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>

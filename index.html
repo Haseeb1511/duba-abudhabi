@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("ride-site-theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
   <title>Dubai to Abu Dhabi Ride Service | Dubai to Abu Dhabi Lift</title>
@@ -42,7 +53,7 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=25">
 </head>
 
 <body>
@@ -101,22 +112,48 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Dubai to Abu Dhabi</p>
-          <h1>Plan your ride from <span class="hero-title-gold">Dubai to Abu Dhabi</span></h1>
-          <p class="hero-lead">Over 5 years operating daily along the E11 highway corridor, with 5,000+ commuters
-            transported safely. Choose a budget shared carpool or a private executive ride with clear upfront fares.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Daily Commute Service · Dubai ⇄ Abu Dhabi</p>
+          <h1>Dubai ⇄ Abu Dhabi Daily Rides <span class="hero-title-gold">From AED 150</span></h1>
+          <p class="hero-lead">Door-to-door carpool and private rides between Dubai and Abu Dhabi. Clear fixed prices, comfortable air-conditioned cars, and Salik &amp; Darb tolls already included.</p>
           <div class="hero-actions"><a class="button button-primary" href="#" data-whatsapp
               data-message="Hello, I would like to book a ride from Dubai to Abu Dhabi. Please share availability and the fare.">Book
               a ride on WhatsApp <span aria-hidden="true">→</span></a><button
-              class="button button-secondary call-button" type="button" data-call-now
-              aria-describedby="call-setup-note">Call now <span aria-hidden="true">☎</span></button></div>
-          <p class="call-note" id="call-setup-note" data-call-note hidden>Call now will work once the business phone
-            number is added.</p>
+              class="button button-secondary call-button" type="button" data-call-now>Call now <span
+                aria-hidden="true">☎</span></button></div>
           <ul class="hero-points" aria-label="Service overview">
-            <li><span aria-hidden="true">✓</span> 5+ years operating on the Dubai–Abu Dhabi E11 corridor</li>
-            <li><span aria-hidden="true">✓</span> 5,000+ passengers carried safely door-to-door</li>
-            <li><span aria-hidden="true">✓</span> Clear upfront fares agreed before you ride</li>
+            <li><span aria-hidden="true">✓</span> <strong>5+ years</strong> E11 corridor</li>
+            <li><span aria-hidden="true">✓</span> <strong>5,000+ riders</strong> door-to-door</li>
+            <li><span aria-hidden="true">✓</span> <strong>Tolls included</strong> · zero surge</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Step How It Works Strip -->
+    <section class="how-it-works-strip" aria-label="How booking works">
+      <div class="wrap">
+        <div class="how-steps-grid">
+          <div class="how-step-card">
+            <span class="how-step-num" aria-hidden="true">01</span>
+            <div class="how-step-body">
+              <h3>Send Pickup on WhatsApp</h3>
+              <p>Share your Dubai or Abu Dhabi area and preferred shift or time.</p>
+            </div>
+          </div>
+          <div class="how-step-card">
+            <span class="how-step-num" aria-hidden="true">02</span>
+            <div class="how-step-body">
+              <h3>Get Instant Fixed Quote</h3>
+              <p>Receive an all-inclusive rate with Salik, Darb, and highway fuel included.</p>
+            </div>
+          </div>
+          <div class="how-step-card">
+            <span class="how-step-num" aria-hidden="true">03</span>
+            <div class="how-step-body">
+              <h3>Doorstep Chauffeur Pickup</h3>
+              <p>Your licensed driver arrives at your home, hotel, or office on time.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -229,30 +266,30 @@
       <div class="wrap about-container">
         <div class="about-header">
           <div class="about-pill-badge">
-            <span class="badge-icon">📍</span>
-            <span>5+ YEARS DEDICATED SERVICE • E11 HIGHWAY SPECIALISTS</span>
+            <svg class="inline-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>5+ YEARS ON THE DUBAI–ABU DHABI ROUTE</span>
           </div>
-          <h2 id="about-heading">About Us · Dubai to Abu Dhabi Specialists</h2>
-          <p class="about-lead">Licensed, punctual passenger transport connecting Dubai and Abu Dhabi door-to-door.</p>
+          <h2 id="about-heading">About Us · Your Daily Commute Partner</h2>
+          <p class="about-lead">We take the hassle out of traveling between Dubai and Abu Dhabi with reliable door-to-door pick and drop.</p>
         </div>
 
         <!-- Modern Unified 4-Metric Horizontal Stats Strip -->
         <div class="about-stats-bar" aria-label="Company Key Metrics">
           <div class="about-stat-item">
             <div class="about-stat-number">5<sup>+</sup></div>
-            <div class="about-stat-label">years of experience</div>
+            <div class="about-stat-label">Years on This Route</div>
           </div>
           <div class="about-stat-item">
             <div class="about-stat-number">8</div>
-            <div class="about-stat-label">modern AC Vehicles</div>
+            <div class="about-stat-label">Clean, AC Vehicles</div>
           </div>
           <div class="about-stat-item">
             <div class="about-stat-number">5,000<sup>+</sup></div>
-            <div class="about-stat-label">Passengers Transported</div>
+            <div class="about-stat-label">Riders Served</div>
           </div>
           <div class="about-stat-item">
             <div class="about-stat-number">99.4<sup>%</sup></div>
-            <div class="about-stat-label">on-Time Arrival rate</div>
+            <div class="about-stat-label">On-Time Trips</div>
           </div>
         </div>
 
@@ -260,22 +297,18 @@
         <div class="about-story-grid">
           <div class="about-story-left">
             <div class="about-story-block">
-              <span class="about-story-tag">📍 DEDICATED CORRIDOR SPECIALIZATION (5+ YEARS)</span>
-              <p>Our single-corridor focus eliminates travel fatigue with direct, door-to-door service without
-                transfers. Connecting hubs like DIFC &amp; Downtown Dubai to ADGM &amp; Al Reem Island, our drivers
-                master every Sheikh Zayed Road bottleneck, toll timing (Salik &amp; Darb), and peak hour shift to
-                guarantee punctuality.</p>
+              <span class="about-story-tag">WE DRIVE THIS ROUTE EVERY SINGLE DAY</span>
+              <p>Driving between Dubai and Abu Dhabi every day can be exhausting and expensive. We specialize strictly in this route, so our drivers know the traffic flow, the toll gates (Salik and Darb), and the quickest roads from areas like Downtown Dubai and Marina straight to ADGM and central Abu Dhabi. You get picked up right at your doorstep and dropped off directly where you need to go.</p>
             </div>
-            <div class="about-story-block">
-              <span class="about-story-tag">🚗 MODERN FLEET &amp; PROFESSIONAL CHAUFFEURS</span>
-              <p>With a meticulously maintained fleet of modern, air-conditioned MPVs and premium SUVs, we deliver safe
-                and hassle-free travel. From daily commutes to private executive transfers, our background-verified
-                drivers manage the drive with defensive safety and professional decorum so you arrive relaxed.</p>
+            <div class="about-story-block about-story-secondary">
+              <span class="about-story-tag">CLEAN CARS &amp; RESPECTFUL DRIVERS</span>
+              <p>All our cars are clean, spacious, and air-conditioned—mostly family MPVs and SUVs like the Kia Carnival and Toyota Grand Highlander. Our drivers are licensed, polite, and always drive at safe, legal highway speeds. Whether you share a ride to save money or book a private car for yourself, we make the journey simple and relaxing.</p>
             </div>
+            <a href="about.html" class="text-link about-more-link">Read more about our story &amp; standards <span aria-hidden="true">→</span></a>
           </div>
           <div class="about-story-right">
             <div class="about-story-image-wrap">
-              <img src="images/fleet/toyota-grand-highlander-clean.jpg" alt="Toyota Grand Highlander executive vehicle"
+              <img src="images/fleet/toyota-grand-highlander-clean.webp" alt="Toyota Grand Highlander executive vehicle"
                 width="800" height="500" loading="lazy" decoding="async">
             </div>
           </div>
@@ -290,17 +323,21 @@
             <p class="eyebrow">Starting fares</p>
             <h2>Rates to help you plan</h2>
           </div>
-          <p>These are starting figures shown by the service. Ask for the full quote for your route and travel details
-            before booking.</p>
+          <p>Clear, upfront prices with no hidden charges. Exact rates depend on your pickup and drop-off neighborhood—message us on WhatsApp for a quick quote.</p>
         </div>
 
         <!-- 3 Core Commute Plans (Daily / Weekly / Monthly) -->
         <div class="commute-plans-overview" aria-label="Core Commute Plans">
+          <div class="plan-tabs-mobile" role="tablist" aria-label="Select commute plan">
+            <button type="button" class="plan-tab-btn is-active" role="tab" aria-selected="true" data-plan-tab="0">Daily Ride</button>
+            <button type="button" class="plan-tab-btn" role="tab" aria-selected="false" data-plan-tab="1">Weekly Pass</button>
+            <button type="button" class="plan-tab-btn" role="tab" aria-selected="false" data-plan-tab="2">Monthly Pass</button>
+          </div>
           <div class="commute-plans-grid">
             <!-- Plan 1: Daily Commute -->
-            <article class="plan-overview-card">
+            <article class="plan-overview-card is-active-plan" data-plan-card="0">
               <div class="plan-header">
-                <span class="plan-badge">⚡ Daily On-Demand</span>
+                <span class="plan-badge">Daily On-Demand</span>
                 <h3 class="plan-title">Daily Rides</h3>
                 <p class="plan-subtitle">Single one-way trip or same-day return between Dubai and Abu Dhabi</p>
               </div>
@@ -311,20 +348,20 @@
               </div>
               <div class="plan-rates-box">
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 Shared</span> One-Way</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">Shared</span> One-Way</span>
                   <span class="plan-rate-price">AED 150</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 Shared</span> Round Trip</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">Shared</span> Round Trip</span>
                   <span class="plan-rate-price">AED 220</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 Private</span> Solo
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">Private</span> Solo
                     One-Way</span>
                   <span class="plan-rate-price">From AED 250</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 Private</span> Round Trip</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">Private</span> Round Trip</span>
                   <span class="plan-rate-price">From AED 450</span>
                 </div>
               </div>
@@ -335,8 +372,8 @@
               </ul>
               <div class="plan-schedule-clean">
                 <div class="plan-booking-hint">
-                  <span aria-hidden="true">⏱️</span> <span><strong>Advance booking:</strong> 2–4 hrs ahead (or night
-                    before for 7:20 AM)</span>
+                  <span><strong>Advance booking:</strong> 2–4 hrs ahead (or night
+                    before for 7:30 AM)</span>
                 </div>
               </div>
               <div class="plan-action">
@@ -353,9 +390,9 @@
             </article>
 
             <!-- Plan 2: Weekly Pass -->
-            <article class="plan-overview-card">
+            <article class="plan-overview-card" data-plan-card="1">
               <div class="plan-header">
-                <span class="plan-badge">📅 Weekly Pass</span>
+                <span class="plan-badge">Weekly Office Pass</span>
                 <h3 class="plan-title">Weekly Pass</h3>
                 <p class="plan-subtitle">5 consecutive working days office commute (Monday to Friday)</p>
               </div>
@@ -366,20 +403,20 @@
               </div>
               <div class="plan-rates-box">
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 Shared</span> Mon–Fri Seat</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">Shared</span> Mon–Fri Seat</span>
                   <span class="plan-rate-price">AED 550 / wk</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 Private</span> Dedicated
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">Private</span> Dedicated
                     Car</span>
                   <span class="plan-rate-price">From AED 1,400 / wk</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🚪 Pickup</span> Door-to-Door</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">Pickup</span> Door-to-Door</span>
                   <span class="plan-rate-price plan-included">Included</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🛣️ Tolls</span> Salik &amp;
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">Tolls</span> Salik &amp;
                     Darb</span>
                   <span class="plan-rate-price plan-included">Included</span>
                 </div>
@@ -391,7 +428,7 @@
               </ul>
               <div class="plan-schedule-clean">
                 <div class="plan-booking-hint">
-                  <span aria-hidden="true">⏱️</span> <span><strong>Advance booking:</strong> 24 hrs ahead (reserve by
+                  <span><strong>Advance booking:</strong> 24 hrs ahead (reserve by
                     Sunday for the week)</span>
                 </div>
               </div>
@@ -409,10 +446,10 @@
             </article>
 
             <!-- Plan 3: Monthly Commute -->
-            <article class="plan-overview-card plan-featured">
+            <article class="plan-overview-card plan-featured" data-plan-card="2">
               <div class="plan-border-beam" aria-hidden="true"></div>
               <div class="plan-header">
-                <span class="plan-badge">⭐ Monthly Package</span>
+                <span class="plan-badge">Monthly Package</span>
                 <h3 class="plan-title">Monthly Commute</h3>
                 <p class="plan-subtitle">Full working month office travel (Monday to Friday · 20–22 workdays)</p>
               </div>
@@ -423,21 +460,21 @@
               </div>
               <div class="plan-rates-box">
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-shared">👥 Shared</span> Mon–Fri
+                  <span class="plan-rate-type"><span class="rate-badge rate-shared">Shared</span> Mon–Fri
                     Commute</span>
                   <span class="plan-rate-price">AED 2,500 / mo</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-private">🚗 Private</span> Executive
+                  <span class="plan-rate-type"><span class="rate-badge rate-private">Private</span> Executive
                     Car</span>
                   <span class="plan-rate-price">From AED 7,000 / mo</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🚪 Pickup</span> Door-to-Door</span>
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">Pickup</span> Door-to-Door</span>
                   <span class="plan-rate-price plan-included">Included</span>
                 </div>
                 <div class="plan-rate-row">
-                  <span class="plan-rate-type"><span class="rate-badge rate-perk">🛣️ Tolls</span> Salik &amp;
+                  <span class="plan-rate-type"><span class="rate-badge rate-perk">Tolls</span> Salik &amp;
                     Darb</span>
                   <span class="plan-rate-price plan-included">Included</span>
                 </div>
@@ -449,7 +486,7 @@
               </ul>
               <div class="plan-schedule-clean">
                 <div class="plan-booking-hint">
-                  <span aria-hidden="true">⏱️</span> <span><strong>Advance booking:</strong> 24–48 hrs ahead (reserve
+                  <span><strong>Advance booking:</strong> 24–48 hrs ahead (reserve
                     1–2 days prior to start)</span>
                 </div>
               </div>
@@ -469,7 +506,7 @@
         </div>
 
         <div class="fare-location-card">
-          <div class="fare-location-icon" aria-hidden="true">📍</div>
+          <div class="fare-location-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div class="fare-location-content">
             <h4>Location-Based Pricing</h4>
             <p>Fares adjust by neighborhood (Downtown, Marina, JLT, Barsha, DIP). Share your location on WhatsApp for an
@@ -489,7 +526,7 @@
           <!-- Morning Departures Group -->
           <div class="shift-column-group">
             <div class="shift-group-header">
-              <span class="shift-group-icon" aria-hidden="true">🌅</span>
+              <span class="shift-group-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg></span>
               <div class="shift-group-info">
                 <h3 class="shift-group-title">Morning Departures</h3>
                 <div class="shift-group-route">Dubai ➔ Abu Dhabi</div>
@@ -518,7 +555,7 @@
           <!-- Evening Return Shifts Group -->
           <div class="shift-column-group">
             <div class="shift-group-header">
-              <span class="shift-group-icon" aria-hidden="true">🌇</span>
+              <span class="shift-group-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10V2"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m16 6-4 4-4-4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg></span>
               <div class="shift-group-info">
                 <h3 class="shift-group-title">Evening Return Shifts</h3>
                 <div class="shift-group-route">Abu Dhabi ➔ Dubai</div>
@@ -555,11 +592,10 @@
     <section class="section services-overview-section" id="services" aria-labelledby="services-heading">
       <div class="wrap">
         <div class="services-overview-header">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Specialized Corridor Transport</p>
-          <h2 id="services-heading">Our Services Between Dubai and Abu Dhabi</h2>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Rides For Every Need</p>
+          <h2 id="services-heading">Our Ride Services Between Dubai and Abu Dhabi</h2>
           <p class="services-overview-lead">
-            Tailored daily commute solutions operating along the E11 highway. Explore our specialized services designed
-            for students, private travelers, and corporate organizations.
+            Whether you commute to the office every day, need a ride for school or university, or prefer a private car for yourself, we have a service to fit your routine.
           </p>
         </div>
 
@@ -567,7 +603,7 @@
           <!-- Service Card 1: School & Campus Lift -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-school">🎓 School &amp; Campus</span>
+              <span class="service-pill-badge badge-school">School &amp; Campus</span>
               <span class="service-meta-tag">Mon – Fri Shifts</span>
             </div>
             <div class="service-card-icon-wrap icon-school" aria-hidden="true">
@@ -587,7 +623,7 @@
             <ul class="service-card-features">
               <li><span class="feature-check" aria-hidden="true">✓</span> Direct door-to-door home &amp; campus pickup
               </li>
-              <li><span class="feature-check" aria-hidden="true">✓</span> Synced 7:20 AM arrival &amp; 3:30 PM return
+              <li><span class="feature-check" aria-hidden="true">✓</span> Synced 7:30 AM departure &amp; 3:30 PM return
                 shifts</li>
             </ul>
             <div class="service-card-footer">
@@ -606,7 +642,7 @@
           <!-- Service Card 2: Private Car Lift -->
           <article class="service-preview-card service-featured">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-private">🚗 VIP &amp; Executive</span>
+              <span class="service-pill-badge badge-private">VIP &amp; Executive</span>
               <span class="service-meta-tag">24/7 On Demand</span>
             </div>
             <div class="service-card-icon-wrap icon-private" aria-hidden="true">
@@ -620,8 +656,7 @@
               <a href="private-car-lift.html">Private Car Lift</a>
             </h3>
             <p class="service-card-desc">
-              Direct, 100% private door-to-door chauffeured rides on your exact schedule. Zero stranger stops, complete
-              privacy, and premium highway comfort.
+              Direct, private door-to-door rides on your schedule. No other passengers, no extra stops—just you and a comfortable car straight to your destination.
             </p>
             <ul class="service-card-features">
               <li><span class="feature-check" aria-hidden="true">✓</span> 100% private vehicle — zero shared stops</li>
@@ -643,7 +678,7 @@
           <!-- Service Card 3: Corporate Car Lift -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-corporate">🏢 Corporate &amp; Teams</span>
+              <span class="service-pill-badge badge-corporate">Corporate &amp; Teams</span>
               <span class="service-meta-tag">8 Daily Shifts</span>
             </div>
             <div class="service-card-icon-wrap icon-corporate" aria-hidden="true">
@@ -663,8 +698,7 @@
               <a href="corporate-car-lift.html">Corporate Car Lift</a>
             </h3>
             <p class="service-card-desc">
-              Tailored employee transport, corporate shuttle pools, and executive staff accounts between Dubai and Abu
-              Dhabi business districts.
+              Reliable daily transport for teams and employees traveling between Dubai and Abu Dhabi business districts. Simple monthly billing.
             </p>
             <ul class="service-card-features">
               <li><span class="feature-check" aria-hidden="true">✓</span> 8 daily shift options synced to UAE office
@@ -688,7 +722,7 @@
           <!-- Service Card 4: Taxi Service -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-taxi">🚕 Intercity Taxi</span>
+              <span class="service-pill-badge badge-taxi">Intercity Taxi</span>
               <span class="service-meta-tag">24/7 On Demand</span>
             </div>
             <div class="service-card-icon-wrap icon-taxi" aria-hidden="true">
@@ -705,8 +739,7 @@
               <a href="taxi-service.html">Taxi Service</a>
             </h3>
             <p class="service-card-desc">
-              Direct highway intercity taxi with fixed upfront pricing, zero surge, and rapid 24/7 door-to-door dispatch
-              between Dubai and Abu Dhabi.
+              Need to travel right now? Direct intercity car service with fixed pricing, no surge rates, and 24/7 WhatsApp booking for city trips or airport runs.
             </p>
             <ul class="service-card-features">
               <li><span class="feature-check" aria-hidden="true">✓</span> Transparent fixed rates with all Salik &amp;
@@ -729,7 +762,7 @@
           <!-- Service Card 5: Ladies Car Lift -->
           <article class="service-preview-card">
             <div class="service-card-top">
-              <span class="service-pill-badge badge-ladies">🌸 Ladies Only</span>
+              <span class="service-pill-badge badge-ladies">Ladies Only</span>
               <span class="service-meta-tag">Safe &amp; Respectful</span>
             </div>
             <div class="service-card-icon-wrap icon-ladies" aria-hidden="true">
@@ -745,8 +778,7 @@
               <a href="ladies-car-lift.html">Ladies Car Lift</a>
             </h3>
             <p class="service-card-desc">
-              Dedicated, secure, and peaceful door-to-door car lift for female university students, working
-              professionals, and mothers.
+              Comfortable and private carpool for women, university students, and mothers commuting between Dubai and Abu Dhabi. Respectful, safe, and reliable.
             </p>
             <ul class="service-card-features">
               <li><span class="feature-check" aria-hidden="true">✓</span> Women-only passenger cabin with verified,
@@ -773,19 +805,17 @@
       <div class="wrap">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Luxury Fleet &amp; Chauffeurs</p>
+            <p class="eyebrow">Clean, Modern Fleet</p>
             <h2>Vehicles for Your Dubai–Abu Dhabi Commute</h2>
           </div>
-          <p>Modern, air-conditioned MPVs and SUVs driven by vetted, background-checked chauffeurs. <a
-              href="drivers.html" class="text-link" style="font-weight: 750;">Meet our drivers &amp; safety standards
-              <span aria-hidden="true">→</span></a></p>
+          <p>Spacious, air-conditioned MPVs and SUVs driven by licensed, background-checked drivers. <a href="drivers.html" class="text-link" style="font-weight: 750;">Meet our drivers &amp; safety standards <span aria-hidden="true">→</span></a></p>
         </div>
         <div class="vehicle-carousel-controls" role="group" aria-label="Vehicle gallery controls"><button
             class="carousel-button" type="button" data-vehicle-previous aria-label="Previous vehicle"
             disabled>←</button><span class="vehicle-count" data-vehicle-count aria-live="polite">1 / 8</span><button
             class="carousel-button" type="button" data-vehicle-next aria-label="Next vehicle">→</button></div>
         <div class="vehicle-grid" id="vehicle-grid">
-          <article class="vehicle-card"><img src="images/Kia Carnival_gimini.jpg" width="800" height="500"
+          <article class="vehicle-card"><img src="images/kia-carnival.webp" width="800" height="500"
               alt="Representative Kia Carnival photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Kia Carnival</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -793,11 +823,11 @@
                 aria-label="Book Kia Carnival on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Kia Sedona_gimini.jpg" width="800" height="500"
+          <article class="vehicle-card"><img src="images/kia-sedona.webp" width="800" height="500"
               alt="Representative Kia Sedona photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Kia Sedona</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -805,11 +835,11 @@
                 aria-label="Book Kia Sedona on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16" height="16"
                   fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Honda Odyssey.png" width="800" height="500"
+          <article class="vehicle-card"><img src="images/honda-odyssey.webp" width="800" height="500"
               alt="Representative Honda Odyssey photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Honda Odyssey</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -817,11 +847,11 @@
                 aria-label="Book Honda Odyssey on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Toyota Grand Highlander_gimini.jpg" width="800" height="500"
+          <article class="vehicle-card"><img src="images/toyota-grand-highlander.webp" width="800" height="500"
               alt="Representative Toyota Grand Highlander photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">SUV</span>
               <h3>Toyota Grand Highlander</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -829,11 +859,11 @@
                 aria-label="Book Toyota Grand Highlander on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24"
                   width="16" height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Toyota Previa_chatgpt.png" width="800" height="500"
+          <article class="vehicle-card"><img src="images/toyota-previa.webp" width="800" height="500"
               alt="Representative Toyota Previa photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Toyota Previa</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -841,11 +871,11 @@
                 aria-label="Book Toyota Previa on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Toyota Sienna_chatgpt.png" width="800" height="500"
+          <article class="vehicle-card"><img src="images/toyota-sienna.webp" width="800" height="500"
               alt="Representative Toyota Sienna photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Toyota Sienna</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -853,11 +883,11 @@
                 aria-label="Book Toyota Sienna on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Nissan Altima_chatgpt.png" width="800" height="500"
+          <article class="vehicle-card"><img src="images/nissan-altima.webp" width="800" height="500"
               alt="Representative Nissan Altima photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">Sedan</span>
               <h3>Nissan Altima</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -865,11 +895,11 @@
                 aria-label="Book Nissan Altima on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
-          <article class="vehicle-card"><img src="images/Nissan Quest_gimini.jpg" width="800" height="500"
+          <article class="vehicle-card"><img src="images/nissan-quest.webp" width="800" height="500"
               alt="Representative Nissan Quest photo" loading="lazy" decoding="async">
             <div class="vehicle-info"><span class="vehicle-type">MPV</span>
               <h3>Nissan Quest</h3><a class="button button-vehicle-book" href="#" data-whatsapp
@@ -877,8 +907,8 @@
                 aria-label="Book Nissan Quest on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" width="16"
                   height="16" fill="currentColor" aria-hidden="true">
                   <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
-                </svg><span>Book Me</span></a>
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                </svg><span>Book this car</span></a>
             </div>
           </article>
         </div>
@@ -890,100 +920,91 @@
     <section class="section drivers-home-section" id="drivers" aria-labelledby="drivers-heading">
       <div class="wrap">
         <div class="drivers-home-header">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Certified Highway Standards</p>
-          <h2 id="drivers-heading">Our Professional <span class="shift-title-gold">Drivers</span></h2>
-          <p class="drivers-home-lead">Vetted, route-specialized chauffeurs committed to punctuality, executive safety,
-            and peaceful travel on every single trip between Dubai and Abu Dhabi.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Safety &amp; Standards</p>
+          <h2 id="drivers-heading">Our Experienced <span class="shift-title-gold">Drivers</span></h2>
+          <p class="drivers-home-lead">Friendly, licensed drivers who make the daily trip between Dubai and Abu Dhabi safe, punctual, and easy.</p>
         </div>
 
         <div class="drivers-feature-grid" aria-label="Professional Driver Standards">
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🛡️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Fully Licensed &amp; Approved</h3>
-              <p>UAE certified commercial chauffeurs adhering to all official highway and passenger transport
-                regulations.</p>
+              <h3>Licensed &amp; UAE Experienced</h3>
+              <p>Every driver holds a valid UAE commercial driving license with years of daily highway experience.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">📋</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Vetted &amp; Zero-Accident Records</h3>
-              <p>Rigorous background security checks and identity audits with a verifiable, immaculate driving history.
-              </p>
+              <h3>Clean Driving Records</h3>
+              <p>We only work with careful drivers who have clean safety records and respect highway speed limits.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🛣️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 8 5"/><path d="m16 5 4 14"/><path d="M12 6v2"/><path d="M12 11v2"/><path d="M12 16v2"/></svg></div>
             <div class="driver-feature-text">
-              <h3>E11 Highway Route Specialists</h3>
-              <p>Trained specifically on the Dubai ⇄ Abu Dhabi corridor with daily highway mastery and lane flow
-                expertise.</p>
+              <h3>Route &amp; Traffic Experts</h3>
+              <p>Because they drive the E11 route every day, they know the best exits, lane patterns, and how to avoid traffic jams.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">💬</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Fluent in English &amp; Arabic</h3>
-              <p>Courteous, bilingual communication ensuring seamless coordination for professionals, families, and
-                commuters.</p>
+              <h3>Polite &amp; Helpful</h3>
+              <p>Fluent in English and Arabic, respectful of your quiet time, and always ready to help you with your bags.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">📵</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Zero-Distraction Safety Policy</h3>
-              <p>Strict speed compliance and absolute zero tolerance for mobile phone use while behind the wheel.</p>
+              <h3>Safe Driving, No Phones</h3>
+              <p>Zero phone distractions while driving. Our drivers focus entirely on the road to keep you safe.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🗺️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Complete Dual-Emirate Navigation</h3>
-              <p>In-depth local knowledge of every master community and business hub across both Dubai and Abu Dhabi.
-              </p>
+              <h3>Knows Both Cities Well</h3>
+              <p>Familiar with residential communities, towers, business parks, and government complexes in Dubai and Abu Dhabi.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">⏱️</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Guaranteed Punctual Pickups</h3>
-              <p>Chauffeurs track corridor traffic in advance to ensure on-time doorstep and lobby arrivals, every trip.
-              </p>
+              <h3>On-Time Pickups</h3>
+              <p>Drivers check live road traffic ahead of time and arrive outside your home or office early.</p>
             </div>
           </div>
 
           <div class="driver-feature-item">
-            <div class="driver-feature-icon" aria-hidden="true">🧳</div>
+            <div class="driver-feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/></svg></div>
             <div class="driver-feature-text">
-              <h3>Luggage Help &amp; Spotless Cabins</h3>
-              <p>Executive courtesy with personal baggage assistance and pristine, climate-controlled vehicles at all
-                times.</p>
+              <h3>Clean, AC Cars Every Day</h3>
+              <p>Every car is kept clean, smelling fresh, and pleasantly air-conditioned so you can rest during the ride.</p>
             </div>
           </div>
         </div>
 
         <div class="drivers-cta-card">
           <div class="drivers-cta-info">
-            <span class="drivers-cta-badge">🌟 Executive Chauffeurs Ready Daily</span>
+            <span class="drivers-cta-badge">Executive Chauffeurs Ready Daily</span>
             <h3>Book Your Ride with Our Professional Drivers</h3>
             <p>Share your pickup neighborhood and preferred shift timing on WhatsApp for quick confirmation and clear,
               all-inclusive pricing.</p>
           </div>
           <div class="drivers-cta-actions">
-            <a class="button button-primary button-wa-pulse"
-              href="https://wa.me/971508521681?text=Hi,%20I%27m%20interested%20in%20your%20car%20lift%20services.%20Please%20share%20details%20about%20pricing%20and%20availability."
+            <a class="button button-primary button-wa-pulse" href="#"
               data-whatsapp
               data-message="Hi, I'm interested in your car lift services. Please share details about pricing and availability.">
               <svg class="wa-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
                 <path
-                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-.1.25-1.25-4.47-5.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
+                  d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.86 1.54h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.47zm-8.46 18.49h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.97-9.98 9.97zm5.47-7.47c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a8.98 8.98 0 0 1-1.67-2.08c-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z" />
               </svg>
               <span>Book Now on WhatsApp</span>
               <span aria-hidden="true">→</span>
@@ -1007,16 +1028,14 @@
         <!-- E11 Highway Corridor Spotlight Card -->
         <div class="route-corridor-spotlight">
           <div class="route-corridor-visual">
-            <img src="images/Gemini_Generated_Image_43be9143be9143be.jpg"
+            <img src="images/dubai-abudhabi-corridor.webp"
               alt="Dubai to Abu Dhabi 150km corridor night route and skyline" width="600" height="750" loading="lazy"
               decoding="async">
           </div>
           <div class="route-corridor-info">
-            <span class="route-corridor-pill">📍 Direct E11 Highway Corridor</span>
-            <h3>150 KM Non-Stop Direct Transit Between Dubai &amp; Abu Dhabi</h3>
-            <p>Our daily services connect Dubai and Abu Dhabi along the Sheikh Zayed Road (E11) corridor without
-              transfers, station queues, or unnecessary detours. Enjoy prompt, door-to-door comfort for corporate
-              commutes, airport transfers, and private travel.</p>
+            <span class="route-corridor-pill">Direct Highway Route</span>
+            <h3>Direct Door-to-Door Between Dubai &amp; Abu Dhabi</h3>
+            <p>Skip the crowded bus stations and multi-metro transfers. We pick you up right from your building in Dubai and drive you straight to your stop in Abu Dhabi via Sheikh Zayed Road (E11)—fast, comfortable, and easy.</p>
             <div class="route-corridor-stats">
               <div class="route-corridor-stat">
                 <span class="corridor-stat-val">150 km</span>
@@ -1047,7 +1066,7 @@
               <h3>150 KM Intercity Highway Journey</h3>
             </div>
             <div class="corridor-active-status" id="corridor-status-pill">
-              <span class="corridor-status-icon">🚘</span>
+              <span class="corridor-status-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5v5Z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>
               <span class="corridor-status-text">Departing: <strong>Dubai Origin (0 KM)</strong></span>
             </div>
           </div>
@@ -1122,7 +1141,7 @@
           <!-- Bottom Corridor Legend Bar -->
           <div class="corridor-scroller-footer">
             <div class="corridor-highway-tag">
-              <span class="hw-icon">🛣️</span>
+              <span class="hw-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 8 5"/><path d="m16 5 4 14"/><path d="M12 6v2"/><path d="M12 11v2"/><path d="M12 16v2"/></svg></span>
               <span><strong>E11 Sheikh Zayed Road</strong> ➔ <strong>E311 Sheikh Mohammed Bin Zayed Rd</strong></span>
             </div>
             <div class="corridor-scroll-hint">
@@ -1137,7 +1156,7 @@
             <!-- Card 1: Dubai Pickup Points -->
             <article class="location-coverage-card location-card-dubai">
               <div class="location-card-header">
-                <span class="location-city-badge">📍 ORIGIN - DUBAI</span>
+                <span class="location-city-badge">ORIGIN · DUBAI</span>
                 <h3 class="location-card-title">Dubai Pickup Points</h3>
                 <p class="location-card-sub">Direct doorstep &amp; lobby pickups from homes, hotels, and business towers
                 </p>
@@ -1145,7 +1164,7 @@
               <div class="location-groups-list">
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🏙️</span> Downtown &amp; Financial District
+                    Downtown &amp; Financial District
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Downtown Dubai</span>
@@ -1158,7 +1177,7 @@
 
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🌊</span> Marina, Coast &amp; Media Hubs
+                    Marina, Coast &amp; Media Hubs
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Dubai Marina</span>
@@ -1172,7 +1191,7 @@
 
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🚗</span> Commuter &amp; E11 Highway Corridors
+                    Commuter &amp; E11 Highway Corridors
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Al Barsha</span>
@@ -1186,7 +1205,7 @@
 
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🏡</span> Central &amp; Suburban Neighborhoods
+                    Central &amp; Suburban Neighborhoods
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Bur Dubai</span>
@@ -1199,7 +1218,8 @@
                   </div>
                 </div>
               </div>
-              <p class="location-card-note">💡 Have a specific villa, hotel lobby, or metro station? We arrange direct
+              <button type="button" class="location-expand-btn" data-location-toggle aria-expanded="false"><span>Show all 24 Dubai pickup areas</span> <span aria-hidden="true">▾</span></button>
+              <p class="location-card-note">Have a specific villa, hotel lobby, or metro station? We arrange direct
                 doorstep pickup for every ride.</p>
               <div class="location-card-action">
                 <a class="button button-primary" href="#" data-whatsapp
@@ -1216,7 +1236,7 @@
             <!-- Card 2: Abu Dhabi Drop-off Points -->
             <article class="location-coverage-card location-card-abudhabi">
               <div class="location-card-header">
-                <span class="location-city-badge">🏁 DESTINATION - ABU DHABI</span>
+                <span class="location-city-badge">DESTINATION · ABU DHABI</span>
                 <h3 class="location-card-title">Abu Dhabi Drop-off Points</h3>
                 <p class="location-card-sub">Direct delivery to office towers, islands, embassies, and residential
                   villas</p>
@@ -1224,7 +1244,7 @@
               <div class="location-groups-list">
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🏢</span> Central Business District &amp; Corniche
+                    Central Business District &amp; Corniche
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Abu Dhabi Corniche</span>
@@ -1237,7 +1257,7 @@
 
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🏝️</span> Financial &amp; Cultural Islands
+                    Financial &amp; Cultural Islands
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Al Maryah Island (ADGM)</span>
@@ -1249,7 +1269,7 @@
 
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🏛️</span> Government, Ministries &amp; Exhibitions
+                    Government, Ministries &amp; Exhibitions
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">ADNEC Exhibition Centre</span>
@@ -1262,7 +1282,7 @@
 
                 <div class="location-group-block">
                   <div class="location-group-title">
-                    <span aria-hidden="true">🏘️</span> Suburban, Academic &amp; Industrial Hubs
+                    Suburban, Academic &amp; Industrial Hubs
                   </div>
                   <div class="location-pills">
                     <span class="location-pill">Khalifa City (A &amp; B)</span>
@@ -1274,7 +1294,8 @@
                   </div>
                 </div>
               </div>
-              <p class="location-card-note">💡 Going to a specific corporate headquarters or private villa? We drop you
+              <button type="button" class="location-expand-btn" data-location-toggle aria-expanded="false"><span>Show all 20 Abu Dhabi drop-off areas</span> <span aria-hidden="true">▾</span></button>
+              <p class="location-card-note">Going to a specific corporate headquarters or private villa? We drop you
                 off directly at the doorstep.</p>
               <div class="location-card-action">
                 <a class="button button-primary" href="#" data-whatsapp
@@ -1291,6 +1312,45 @@
         </div>
       </div>
     </section>
+    <!-- Commuter Reviews & Social Proof Section -->
+    <section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Verified Commuters</p>
+            <h2 id="reviews-heading">Trusted by Daily Dubai–Abu Dhabi Riders</h2>
+          </div>
+          <p>Feedback from professionals and families commuting daily along the E11 corridor.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">“I commute from Dubai Marina to ADGM on the Monthly Pass. My driver is outside my building at 7:25 AM sharp every morning. The car is clean, comfortable, and makes the morning trip completely stress-free.”</p>
+            <div class="review-author">
+              <strong>Ahmed Al Mansoori</strong>
+              <span>Financial Analyst · Dubai Marina ⇄ Al Maryah Island</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">“Used the Ladies Car Lift for my daily classes from JLT to Khalifa City. Very polite driver, safe driving on the highway, and nice to know tolls and everything are included upfront.”</p>
+            <div class="review-author">
+              <strong>Fatima H.</strong>
+              <span>University Faculty · JLT ⇄ Khalifa City</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">“Booked a private ride for business meetings between DIFC and Abu Dhabi Corniche. Got a quote on WhatsApp in two minutes, the driver was on time, and it was so much easier than waiting for taxis.”</p>
+            <div class="review-author">
+              <strong>David K.</strong>
+              <span>Management Consultant · DIFC ⇄ Abu Dhabi Corniche</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section faq-section" id="faq">
       <div class="wrap faq-wrap">
         <div class="section-heading">
@@ -1321,12 +1381,13 @@
           </details>
           <details>
             <summary>Are tolls and fuel included?</summary>
-            <p>Ask for these inclusions to be stated in your quote before you book.</p>
+            <p>Yes. Salik and Darb tolls and highway fuel are included in our fares, and your confirmed quote will
+              state this clearly before you book.</p>
           </details>
           <details>
             <summary>How long will the journey take?</summary>
-            <p>Journey time depends on pickup and drop-off locations and traffic. Ask for an estimate for your planned
-              trip.</p>
+            <p>Usually 75–90 minutes door-to-door along the E11. The exact time depends on your pickup and drop-off
+              areas and traffic on the day.</p>
           </details>
           <details>
             <summary>How do I request a ride?</summary>
@@ -1343,11 +1404,11 @@
     <section class="section contact-section" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-copy">
-          <p class="eyebrow">Custom Booking</p>
-          <h2>Book your ride</h2>
-          <p>Share your trip details below to check availability and reserve your door-to-door ride.</p>
+          <p class="eyebrow">Quick Inquiry</p>
+          <h2>Book Your Ride</h2>
+          <p>Fill out your details below and we will confirm availability and your exact rate right away.</p>
           <div class="contact-detail"><span class="contact-icon" aria-hidden="true">@</span>
-            <div><strong>Email (reference)</strong><a href="mailto:dubaitoabudhabilift@gmail.com"
+            <div><strong>Email Us</strong><a href="mailto:dubaitoabudhabilift@gmail.com"
                 data-email>dubaitoabudhabilift@gmail.com</a></div>
           </div>
         </div>
@@ -1356,20 +1417,20 @@
                 maxlength="100" placeholder="Name"></label><label for="customer-phone">Your phone number<input
                 id="customer-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="40"
                 placeholder="Include country code"></label></div>
-          <div class="form-row"><label for="pickup">📍 Pickup area<input id="pickup" name="pickup" required
+          <div class="form-row"><label for="pickup">Pickup area<input id="pickup" name="pickup" required
                 maxlength="160" placeholder="Dubai pickup area (e.g. Downtown, Marina, JLT)"></label><label
-              for="destination">🏁 Destination<input id="destination" name="destination" required maxlength="160"
+              for="destination">Destination<input id="destination" name="destination" required maxlength="160"
                 placeholder="Abu Dhabi drop-off area (e.g. Corniche, ADGM)"></label></div>
           <div class="form-row"><label for="date">Travel date<input id="date" name="date" type="date"></label><label
               for="shift-time">Shift timing (optional)<select id="shift-time" name="shiftTime">
                 <option value="">Any / Flexible timing</option>
-                <optgroup label="🌅 Morning Shifts (Dubai to Abu Dhabi)">
+                <optgroup label="Morning Shifts (Dubai to Abu Dhabi)">
                   <option value="Morning Shift: 7:30 AM">Morning: 7:30 AM</option>
                   <option value="Morning Shift: 8:00 AM">Morning: 8:00 AM</option>
                   <option value="Morning Shift: 8:30 AM">Morning: 8:30 AM</option>
                   <option value="Morning Shift: 9:00 AM">Morning: 9:00 AM</option>
                 </optgroup>
-                <optgroup label="🌇 Evening Return Shifts (Abu Dhabi to Dubai)">
+                <optgroup label="Evening Return Shifts (Abu Dhabi to Dubai)">
                   <option value="Evening Shift: 3:30 PM">Evening: 3:30 PM</option>
                   <option value="Evening Shift: 4:00 PM">Evening: 4:00 PM</option>
                   <option value="Evening Shift: 4:30 PM">Evening: 4:30 PM</option>
@@ -1453,8 +1514,25 @@
     <span class="floating-whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
+  <!-- Mobile Sticky Bottom Action Bar (WhatsApp + Call) -->
+  <div class="mobile-sticky-bar" role="region" aria-label="Quick booking actions">
+    <a class="sticky-bar-wa" href="#" data-whatsapp
+      data-message="Hello, I would like to book a ride between Dubai and Abu Dhabi. Please share availability and fare.">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
+      </svg>
+      <span>Book on WhatsApp</span>
+    </a>
+    <button type="button" class="sticky-bar-call" data-call-now>
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Call Now</span>
+    </button>
+  </div>
+
   <script src="js/config.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=25" defer></script>
 </body>
 
 </html>
