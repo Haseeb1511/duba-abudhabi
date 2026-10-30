@@ -1,7 +1,14 @@
 const selectAll = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 const config = window.CONFIG || {};
-const whatsappNumber = String(config.whatsappIntl || "").replace(/\D/g, "");
-const phoneNumber = String(config.phoneIntl || "").replace(/\D/g, "");
+const normalizePhone = val => {
+  let digits = String(val || "").replace(/\D/g, "");
+  if (/^03\d{9}$/.test(digits)) {
+    digits = "92" + digits.slice(1);
+  }
+  return digits;
+};
+const whatsappNumber = normalizePhone(config.whatsappIntl);
+const phoneNumber = normalizePhone(config.phoneIntl);
 const email = String(config.email || "").trim();
 
 const whatsappUrl = message => {
