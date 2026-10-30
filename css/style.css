@@ -8259,3 +8259,17 @@ html[data-theme="dark"] .review-author span {
     border: 1px solid rgba(212, 175, 55, 0.45);
   }
 }
+
+.plan-subtitle strong {
+  font-weight: 750;
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .plan-subtitle strong {
+  color: #f7cf73;
+  font-weight: 750;
+}
+
+.plan-rate-type strong {
+  font-weight: 750;
+}
