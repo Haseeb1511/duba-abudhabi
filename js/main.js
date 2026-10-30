@@ -74,13 +74,11 @@ try {
   const saved = localStorage.getItem("ride-site-theme");
   if (saved === "dark" || saved === "light") {
     preferredTheme = saved;
-  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    preferredTheme = "dark";
   } else {
     preferredTheme = "light";
   }
 } catch (error) {
-  preferredTheme = root.dataset.theme || "light";
+  preferredTheme = "light";
 }
 setTheme(preferredTheme);
 if (themeToggle) {

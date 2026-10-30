@@ -6,7 +6,7 @@
   (function () {
     try {
       var s = localStorage.getItem("ride-site-theme");
-      var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      var t = (s === "dark" || s === "light") ? s : "light";
       document.documentElement.dataset.theme = t;
     } catch (e) {
       document.documentElement.dataset.theme = "light";
@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0c">
 <title>About Us | Dubai to Abu Dhabi Lift - 5+ Years Intercity Commute Service</title>
 <meta name="description" content="Learn about Dubai to Abu Dhabi Lift: over 5 years specializing exclusively on the E11 highway corridor with 5,000+ commuters transported safely. Licensed drivers, shared carpool and private executive rides.">
-<link rel="canonical" href="https://dubaitoabudhabilift.com/about.html"><link rel="icon" href="images/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="images/apple-touch-icon.png"><link rel="stylesheet" href="css/style.css?v=28">
+<link rel="canonical" href="https://dubaitoabudhabilift.com/about.html"><link rel="icon" href="images/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="images/apple-touch-icon.png"><link rel="stylesheet" href="css/style.css?v=29">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -127,6 +127,6 @@
   <span class="floating-whatsapp-pulse" aria-hidden="true"></span>
 </a>
 
-<script src="js/config.js?v=28" defer></script><script src="js/main.js?v=28" defer></script>
+<script src="js/config.js?v=29" defer></script><script src="js/main.js?v=29" defer></script>
 </body>
 </html>
